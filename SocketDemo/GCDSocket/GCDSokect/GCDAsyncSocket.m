@@ -7917,8 +7917,8 @@ static void CFWriteStreamCallback (CFWriteStreamRef stream, CFStreamEventType ty
 	CFStreamStatus readStatus = CFReadStreamGetStatus(readStream);
 	CFStreamStatus writeStatus = CFWriteStreamGetStatus(writeStream);
     
-    
-    //---------------------------------自转为nsstream 然后发起监听---------------------------------
+ 
+#warning ---------------------------------自转为nsstream 然后发起监听---------------------------------
     NSInputStream *inputStream = (__bridge NSInputStream *)readStream;
     NSOutputStream *outputStream = (__bridge NSOutputStream *)writeStream;
     

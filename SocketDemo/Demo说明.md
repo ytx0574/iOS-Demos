@@ -22,4 +22,4 @@ SocketUdpClient-iOS:           使用AsyncUdpSocket连接的iOS Demo;
 
 
 
-使用需要在各自的Demo里面的Defines中配置  端口 IP
+使用需要在各自的Demo里面的Defines中配置  端口 IP,  测试均使用本地本地网络

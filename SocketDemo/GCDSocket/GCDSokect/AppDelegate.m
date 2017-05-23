@@ -11,7 +11,9 @@
 #import "Defines.h"
 
 @interface AppDelegate ()
-
+{
+    NSMutableData *_inputStreamReceiveData;
+}
 @end
 
 @implementation AppDelegate
@@ -47,6 +49,7 @@
         NSLog(@"GCDSokect-------------------------------------------------开启VoIP后台!! %d", [vc.sokectClient enableBackgroundingOnSocket]);
     }];
     
+    
     if (backgroundAccepted)
     {
         NSLog(@"GCDSokect-------------------------------------------------VOIP backgrounding accepted");
@@ -72,26 +75,67 @@
 #pragma mark - Delegate
 
 
-//此处手动截获CFReadStreamRef的数据, iOS7可以收到, 而iOS10无任何反应.
+//此处手动截获CFReadStreamRef的数据, CCDAsyncSocket本身有回调, 这里再次取出测试;
 - (void)stream:(NSStream *)aStream handleEvent:(NSStreamEvent)eventCode;
 {
-    
-    if ([aStream isKindOfClass:[NSInputStream class]]) {
-        
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
-            uint8_t buffer[1024];  //此处如果一条消息一次读不完, 会分几次返回该方法.
+    switch (eventCode) {
+        case NSStreamEventOpenCompleted:
+        {
+            NSLog(@"NSStreamEventOpenCompleted-- 连接成功");
+        }
+            break;
+        case NSStreamEventHasBytesAvailable:
+        {
+            NSLog(@"NSStreamEventHasBytesAvailable-- read data");
+            
+            uint8_t buffer[1024];
             NSInteger length = [(NSInputStream *)aStream read:buffer maxLength:sizeof(buffer)];
             
-          
-            NSData *data = [NSData dataWithBytes:(const void *)buffer length:length];
-            NSString *msg = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+            //记录当前消息, 此处如果一条消息一次读不完, 会分几次返回该方法.
+            _inputStreamReceiveData ? [_inputStreamReceiveData appendBytes:buffer length:length] : (_inputStreamReceiveData = [NSMutableData dataWithBytes:(const void *)buffer length:length]);
             
-            ShowLocalNotificationAndIfMsgIs963PerformExit3(msg);
-            NSLog(@"--托管消息");
-        });
-        
+            NSString *msg = [[NSString alloc] initWithData:_inputStreamReceiveData encoding:NSUTF8StringEncoding];
+            
+            //当没有下一条消息时, 输出日志并释放对象;
+            if (![(NSInputStream *)aStream hasBytesAvailable]) {
+                
+                ShowLocalNotificationAndIfMsgIs963PerformExit3(msg);
+                //                [self testPerform]; //测试后台执行时间
+                
+                //不用之后及时释放掉
+                @autoreleasepool {
+                    _inputStreamReceiveData = nil;
+                    msg = nil;
+                }
+                
+            }
+        }
+            break;
+            
+        case NSStreamEventHasSpaceAvailable:
+        {
+            NSLog(@"NSStreamEventHasSpaceAvailable-- write data");
+        }
+            break;
+            
+        case NSStreamEventErrorOccurred:
+        {
+            NSLog(@"NSStreamEventErrorOccurred-- 连接错误");
+        }
+            break;
+        case NSStreamEventEndEncountered:
+        {
+            NSLog(@"NSStreamEventEndEncountered--  连接断开或关闭");
+        }
+            break;
+            
+        default:
+        {
+            NSLog(@"NSStreamEventNone--");
+        }
+            break;
     }
-    
+
 }
 
 

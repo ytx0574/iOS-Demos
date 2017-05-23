@@ -87,7 +87,7 @@
     
     [sock performBlock:^{
         if (![sock enableBackgroundingOnSocket]) {
-            ShowLocalNotificationAndIfMsgIs963PerformExit3(@"进入后台失败");
+            ShowLocalNotificationAndIfMsgIs963PerformExit3(@"后台运行失败");
         }
     }];
     
