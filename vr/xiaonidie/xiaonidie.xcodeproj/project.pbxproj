@@ -1,0 +1,602 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2C051A5E1CB769ED000634AA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C051A5D1CB769ED000634AA /* main.m */; };
+		2C051A611CB769ED000634AA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C051A601CB769ED000634AA /* AppDelegate.m */; };
+		2C051A641CB769ED000634AA /* ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2C051A631CB769ED000634AA /* ViewController.mm */; };
+		2C051A671CB769ED000634AA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C051A651CB769ED000634AA /* Main.storyboard */; };
+		2C051A691CB769ED000634AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C051A681CB769ED000634AA /* Assets.xcassets */; };
+		2C051A6C1CB769ED000634AA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C051A6A1CB769ED000634AA /* LaunchScreen.storyboard */; };
+		2C051A771CB769ED000634AA /* xiaonidieTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C051A761CB769ED000634AA /* xiaonidieTests.m */; };
+		2C051A821CB769ED000634AA /* xiaonidieUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C051A811CB769ED000634AA /* xiaonidieUITests.m */; };
+		2C051A961CB76A37000634AA /* libCardboardSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C051A951CB76A37000634AA /* libCardboardSDK.a */; };
+		2C051A991CB76A4C000634AA /* VideoPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C051A981CB76A4C000634AA /* VideoPlayerViewController.m */; };
+		2C051A9B1CB76A7F000634AA /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C051A9A1CB76A7F000634AA /* AVFoundation.framework */; };
+		2C051A9D1CB76AC5000634AA /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C051A9C1CB76AC5000634AA /* GLKit.framework */; };
+		2C051A9F1CB76ACE000634AA /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C051A9E1CB76ACE000634AA /* OpenGLES.framework */; };
+		2C051AA11CB76B77000634AA /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C051AA01CB76B77000634AA /* AudioToolbox.framework */; };
+		2C051AA31CB76B84000634AA /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C051AA21CB76B84000634AA /* CoreAudio.framework */; };
+		2C051AA51CB76BB3000634AA /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C051AA41CB76BB3000634AA /* CoreMedia.framework */; };
+		2C051AA71CB76BD6000634AA /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C051AA61CB76BD6000634AA /* AVKit.framework */; };
+		2C051AA91CB76C0D000634AA /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C051AA81CB76C0D000634AA /* MediaPlayer.framework */; };
+		2C051AAB1CB76C13000634AA /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C051AAA1CB76C13000634AA /* CoreMotion.framework */; };
+		2C051AAD1CB76C94000634AA /* MaterialTypography.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2C051AAC1CB76C94000634AA /* MaterialTypography.bundle */; };
+		2C051AB11CB76D2A000634AA /* congo.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 2C051AB01CB76D2A000634AA /* congo.mp4 */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2C051A731CB769ED000634AA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2C051A511CB769ED000634AA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2C051A581CB769ED000634AA;
+			remoteInfo = xiaonidie;
+		};
+		2C051A7E1CB769ED000634AA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2C051A511CB769ED000634AA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2C051A581CB769ED000634AA;
+			remoteInfo = xiaonidie;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2C051A591CB769ED000634AA /* xiaonidie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = xiaonidie.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2C051A5D1CB769ED000634AA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2C051A5F1CB769ED000634AA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		2C051A601CB769ED000634AA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		2C051A621CB769ED000634AA /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		2C051A631CB769ED000634AA /* ViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ViewController.mm; sourceTree = "<group>"; };
+		2C051A661CB769ED000634AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2C051A681CB769ED000634AA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2C051A6B1CB769ED000634AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2C051A6D1CB769ED000634AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2C051A721CB769ED000634AA /* xiaonidieTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = xiaonidieTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2C051A761CB769ED000634AA /* xiaonidieTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = xiaonidieTests.m; sourceTree = "<group>"; };
+		2C051A781CB769ED000634AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2C051A7D1CB769ED000634AA /* xiaonidieUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = xiaonidieUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2C051A811CB769ED000634AA /* xiaonidieUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = xiaonidieUITests.m; sourceTree = "<group>"; };
+		2C051A831CB769ED000634AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2C051A8F1CB76A25000634AA /* GCSCardboardAudioEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCSCardboardAudioEngine.h; sourceTree = "<group>"; };
+		2C051A901CB76A25000634AA /* GCSCardboardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCSCardboardView.h; sourceTree = "<group>"; };
+		2C051A911CB76A25000634AA /* GCSHeadTransform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCSHeadTransform.h; sourceTree = "<group>"; };
+		2C051A921CB76A25000634AA /* GCSPanoramaView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCSPanoramaView.h; sourceTree = "<group>"; };
+		2C051A931CB76A25000634AA /* GCSVideoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCSVideoView.h; sourceTree = "<group>"; };
+		2C051A941CB76A25000634AA /* GCSWidgetView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCSWidgetView.h; sourceTree = "<group>"; };
+		2C051A951CB76A37000634AA /* libCardboardSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libCardboardSDK.a; sourceTree = "<group>"; };
+		2C051A971CB76A4C000634AA /* VideoPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoPlayerViewController.h; sourceTree = "<group>"; };
+		2C051A981CB76A4C000634AA /* VideoPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoPlayerViewController.m; sourceTree = "<group>"; };
+		2C051A9A1CB76A7F000634AA /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		2C051A9C1CB76AC5000634AA /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
+		2C051A9E1CB76ACE000634AA /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		2C051AA01CB76B77000634AA /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		2C051AA21CB76B84000634AA /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
+		2C051AA41CB76BB3000634AA /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		2C051AA61CB76BD6000634AA /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
+		2C051AA81CB76C0D000634AA /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		2C051AAA1CB76C13000634AA /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		2C051AAC1CB76C94000634AA /* MaterialTypography.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MaterialTypography.bundle; sourceTree = "<group>"; };
+		2C051AB01CB76D2A000634AA /* congo.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = congo.mp4; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2C051A561CB769ED000634AA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2C051AAB1CB76C13000634AA /* CoreMotion.framework in Frameworks */,
+				2C051AA91CB76C0D000634AA /* MediaPlayer.framework in Frameworks */,
+				2C051AA71CB76BD6000634AA /* AVKit.framework in Frameworks */,
+				2C051AA51CB76BB3000634AA /* CoreMedia.framework in Frameworks */,
+				2C051AA31CB76B84000634AA /* CoreAudio.framework in Frameworks */,
+				2C051AA11CB76B77000634AA /* AudioToolbox.framework in Frameworks */,
+				2C051A9F1CB76ACE000634AA /* OpenGLES.framework in Frameworks */,
+				2C051A9D1CB76AC5000634AA /* GLKit.framework in Frameworks */,
+				2C051A9B1CB76A7F000634AA /* AVFoundation.framework in Frameworks */,
+				2C051A961CB76A37000634AA /* libCardboardSDK.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2C051A6F1CB769ED000634AA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2C051A7A1CB769ED000634AA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2C051A501CB769ED000634AA = {
+			isa = PBXGroup;
+			children = (
+				2C051AAA1CB76C13000634AA /* CoreMotion.framework */,
+				2C051AA81CB76C0D000634AA /* MediaPlayer.framework */,
+				2C051AA61CB76BD6000634AA /* AVKit.framework */,
+				2C051AA41CB76BB3000634AA /* CoreMedia.framework */,
+				2C051AA21CB76B84000634AA /* CoreAudio.framework */,
+				2C051AA01CB76B77000634AA /* AudioToolbox.framework */,
+				2C051A9E1CB76ACE000634AA /* OpenGLES.framework */,
+				2C051A9C1CB76AC5000634AA /* GLKit.framework */,
+				2C051A9A1CB76A7F000634AA /* AVFoundation.framework */,
+				2C051A5B1CB769ED000634AA /* xiaonidie */,
+				2C051A751CB769ED000634AA /* xiaonidieTests */,
+				2C051A801CB769ED000634AA /* xiaonidieUITests */,
+				2C051A5A1CB769ED000634AA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2C051A5A1CB769ED000634AA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2C051A591CB769ED000634AA /* xiaonidie.app */,
+				2C051A721CB769ED000634AA /* xiaonidieTests.xctest */,
+				2C051A7D1CB769ED000634AA /* xiaonidieUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2C051A5B1CB769ED000634AA /* xiaonidie */ = {
+			isa = PBXGroup;
+			children = (
+				2C051AB01CB76D2A000634AA /* congo.mp4 */,
+				2C051AAC1CB76C94000634AA /* MaterialTypography.bundle */,
+				2C051A8F1CB76A25000634AA /* GCSCardboardAudioEngine.h */,
+				2C051A901CB76A25000634AA /* GCSCardboardView.h */,
+				2C051A911CB76A25000634AA /* GCSHeadTransform.h */,
+				2C051A921CB76A25000634AA /* GCSPanoramaView.h */,
+				2C051A931CB76A25000634AA /* GCSVideoView.h */,
+				2C051A941CB76A25000634AA /* GCSWidgetView.h */,
+				2C051A951CB76A37000634AA /* libCardboardSDK.a */,
+				2C051A5F1CB769ED000634AA /* AppDelegate.h */,
+				2C051A601CB769ED000634AA /* AppDelegate.m */,
+				2C051A621CB769ED000634AA /* ViewController.h */,
+				2C051A631CB769ED000634AA /* ViewController.mm */,
+				2C051A651CB769ED000634AA /* Main.storyboard */,
+				2C051A971CB76A4C000634AA /* VideoPlayerViewController.h */,
+				2C051A981CB76A4C000634AA /* VideoPlayerViewController.m */,
+				2C051A681CB769ED000634AA /* Assets.xcassets */,
+				2C051A6A1CB769ED000634AA /* LaunchScreen.storyboard */,
+				2C051A6D1CB769ED000634AA /* Info.plist */,
+				2C051A5C1CB769ED000634AA /* Supporting Files */,
+			);
+			path = xiaonidie;
+			sourceTree = "<group>";
+		};
+		2C051A5C1CB769ED000634AA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2C051A5D1CB769ED000634AA /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2C051A751CB769ED000634AA /* xiaonidieTests */ = {
+			isa = PBXGroup;
+			children = (
+				2C051A761CB769ED000634AA /* xiaonidieTests.m */,
+				2C051A781CB769ED000634AA /* Info.plist */,
+			);
+			path = xiaonidieTests;
+			sourceTree = "<group>";
+		};
+		2C051A801CB769ED000634AA /* xiaonidieUITests */ = {
+			isa = PBXGroup;
+			children = (
+				2C051A811CB769ED000634AA /* xiaonidieUITests.m */,
+				2C051A831CB769ED000634AA /* Info.plist */,
+			);
+			path = xiaonidieUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2C051A581CB769ED000634AA /* xiaonidie */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2C051A861CB769ED000634AA /* Build configuration list for PBXNativeTarget "xiaonidie" */;
+			buildPhases = (
+				2C051A551CB769ED000634AA /* Sources */,
+				2C051A561CB769ED000634AA /* Frameworks */,
+				2C051A571CB769ED000634AA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = xiaonidie;
+			productName = xiaonidie;
+			productReference = 2C051A591CB769ED000634AA /* xiaonidie.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2C051A711CB769ED000634AA /* xiaonidieTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2C051A891CB769ED000634AA /* Build configuration list for PBXNativeTarget "xiaonidieTests" */;
+			buildPhases = (
+				2C051A6E1CB769ED000634AA /* Sources */,
+				2C051A6F1CB769ED000634AA /* Frameworks */,
+				2C051A701CB769ED000634AA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2C051A741CB769ED000634AA /* PBXTargetDependency */,
+			);
+			name = xiaonidieTests;
+			productName = xiaonidieTests;
+			productReference = 2C051A721CB769ED000634AA /* xiaonidieTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		2C051A7C1CB769ED000634AA /* xiaonidieUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2C051A8C1CB769ED000634AA /* Build configuration list for PBXNativeTarget "xiaonidieUITests" */;
+			buildPhases = (
+				2C051A791CB769ED000634AA /* Sources */,
+				2C051A7A1CB769ED000634AA /* Frameworks */,
+				2C051A7B1CB769ED000634AA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2C051A7F1CB769ED000634AA /* PBXTargetDependency */,
+			);
+			name = xiaonidieUITests;
+			productName = xiaonidieUITests;
+			productReference = 2C051A7D1CB769ED000634AA /* xiaonidieUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2C051A511CB769ED000634AA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = Johnson;
+				TargetAttributes = {
+					2C051A581CB769ED000634AA = {
+						CreatedOnToolsVersion = 7.1.1;
+						DevelopmentTeam = 2Y2D5R7G89;
+					};
+					2C051A711CB769ED000634AA = {
+						CreatedOnToolsVersion = 7.1.1;
+						DevelopmentTeam = 2Y2D5R7G89;
+						TestTargetID = 2C051A581CB769ED000634AA;
+					};
+					2C051A7C1CB769ED000634AA = {
+						CreatedOnToolsVersion = 7.1.1;
+						DevelopmentTeam = 2Y2D5R7G89;
+						TestTargetID = 2C051A581CB769ED000634AA;
+					};
+				};
+			};
+			buildConfigurationList = 2C051A541CB769ED000634AA /* Build configuration list for PBXProject "xiaonidie" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2C051A501CB769ED000634AA;
+			productRefGroup = 2C051A5A1CB769ED000634AA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2C051A581CB769ED000634AA /* xiaonidie */,
+				2C051A711CB769ED000634AA /* xiaonidieTests */,
+				2C051A7C1CB769ED000634AA /* xiaonidieUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2C051A571CB769ED000634AA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2C051A6C1CB769ED000634AA /* LaunchScreen.storyboard in Resources */,
+				2C051AB11CB76D2A000634AA /* congo.mp4 in Resources */,
+				2C051A691CB769ED000634AA /* Assets.xcassets in Resources */,
+				2C051A671CB769ED000634AA /* Main.storyboard in Resources */,
+				2C051AAD1CB76C94000634AA /* MaterialTypography.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2C051A701CB769ED000634AA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2C051A7B1CB769ED000634AA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2C051A551CB769ED000634AA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2C051A641CB769ED000634AA /* ViewController.mm in Sources */,
+				2C051A991CB76A4C000634AA /* VideoPlayerViewController.m in Sources */,
+				2C051A611CB769ED000634AA /* AppDelegate.m in Sources */,
+				2C051A5E1CB769ED000634AA /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2C051A6E1CB769ED000634AA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2C051A771CB769ED000634AA /* xiaonidieTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2C051A791CB769ED000634AA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2C051A821CB769ED000634AA /* xiaonidieUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2C051A741CB769ED000634AA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2C051A581CB769ED000634AA /* xiaonidie */;
+			targetProxy = 2C051A731CB769ED000634AA /* PBXContainerItemProxy */;
+		};
+		2C051A7F1CB769ED000634AA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2C051A581CB769ED000634AA /* xiaonidie */;
+			targetProxy = 2C051A7E1CB769ED000634AA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2C051A651CB769ED000634AA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2C051A661CB769ED000634AA /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		2C051A6A1CB769ED000634AA /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2C051A6B1CB769ED000634AA /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2C051A841CB769ED000634AA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2C051A851CB769ED000634AA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2C051A871CB769ED000634AA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_BITCODE = NO;
+				INFOPLIST_FILE = xiaonidie/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/xiaonidie",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.johnson.xiaonidie;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		2C051A881CB769ED000634AA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_BITCODE = NO;
+				INFOPLIST_FILE = xiaonidie/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/xiaonidie",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.johnson.xiaonidie;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		2C051A8A1CB769ED000634AA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = xiaonidieTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.johnson.xiaonidieTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/xiaonidie.app/xiaonidie";
+			};
+			name = Debug;
+		};
+		2C051A8B1CB769ED000634AA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = xiaonidieTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.johnson.xiaonidieTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/xiaonidie.app/xiaonidie";
+			};
+			name = Release;
+		};
+		2C051A8D1CB769ED000634AA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = xiaonidieUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.johnson.xiaonidieUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = xiaonidie;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		2C051A8E1CB769ED000634AA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = xiaonidieUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.johnson.xiaonidieUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = xiaonidie;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2C051A541CB769ED000634AA /* Build configuration list for PBXProject "xiaonidie" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2C051A841CB769ED000634AA /* Debug */,
+				2C051A851CB769ED000634AA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2C051A861CB769ED000634AA /* Build configuration list for PBXNativeTarget "xiaonidie" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2C051A871CB769ED000634AA /* Debug */,
+				2C051A881CB769ED000634AA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		2C051A891CB769ED000634AA /* Build configuration list for PBXNativeTarget "xiaonidieTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2C051A8A1CB769ED000634AA /* Debug */,
+				2C051A8B1CB769ED000634AA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		2C051A8C1CB769ED000634AA /* Build configuration list for PBXNativeTarget "xiaonidieUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2C051A8D1CB769ED000634AA /* Debug */,
+				2C051A8E1CB769ED000634AA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2C051A511CB769ED000634AA /* Project object */;
+}
