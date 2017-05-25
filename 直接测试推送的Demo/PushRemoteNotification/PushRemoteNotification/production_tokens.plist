@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>公司的iPad</key>
+	<dict>
+		<key>device</key>
+		<string>iPad (5th generation) (A1822) 10.3</string>
+		<key>stringPushKitToken</key>
+		<string>5c8be3ab27b85b9dc3f599a7f36f0f8f7b3e30f2c466e4f3ebc1e07c37ae839a</string>
+		<key>stringAPSsToken</key>
+		<string>f92d34d01a8cb9dfd5e5c7cbfe8378c4c9bd3bec1f328801e4c6a2a53dcf9187</string>
+	</dict>
+	<key>公司的iPhone5</key>
+	<dict>
+		<key>device</key>
+		<string>iPhone 5 (A1457\/A1518\/A1528\/A1530) 10.2.1</string>
+		<key>stringPushKitToken</key>
+		<string>9acde407ee4e5fefd35db5c59a36d5e8dae22aebccda7bba3852f218ce823803</string>
+		<key>stringAPSsToken</key>
+		<string>d08c96abc635a04d01ce1318fc70645b261bccd8a5e49bd94c54789855e2f6bd</string>
+	</dict>
+</dict>
+</plist>

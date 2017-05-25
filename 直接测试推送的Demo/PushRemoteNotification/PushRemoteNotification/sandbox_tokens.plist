@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>公司的iPhone4</key>
+	<dict>
+		<key>device</key>
+		<string>iPhone 4 (A1332) 7.1.2</string>
+		<key>stringPushKitToken</key>
+		<string></string>
+		<key>stringAPSsToken</key>
+		<string>7eb3b327e84dff402dd9433290d5c943f74724cfc990acea439eefa0daf045f8</string>
+	</dict>
+</dict>
+</plist>
