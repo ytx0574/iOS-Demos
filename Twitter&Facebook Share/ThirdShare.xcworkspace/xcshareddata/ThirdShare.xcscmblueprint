@@ -1,0 +1,25 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "1f809885-3392-45da-a697-5f0f385d6644++8523",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+    "1f809885-3392-45da-a697-5f0f385d6644++8523" : {
+
+    }
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "1f809885-3392-45da-a697-5f0f385d6644++8523" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "2AFDDB1E-D8AB-45AB-93B6-BB63D2FB075F",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "1f809885-3392-45da-a697-5f0f385d6644++8523" : "documents\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "ThirdShare",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Facebook&Twiter分享\/ThirdShare\/ThirdShare.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/125.69.90.110:1010\/svn\/crisisgo_ios_refactor",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Subversion",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "1f809885-3392-45da-a697-5f0f385d6644++8523"
+    }
+  ]
+}

@@ -11,6 +11,9 @@
 #import "NSObject+CallBack.h"
 #import "NSObject+Tools.h"
 #import "TwitterManager.h"
+#import "SelectMedia.h"
+#import "UIActionSheet+Tools.h"
+#import "UIAlertView+Tools.h"
 
 
 
@@ -34,7 +37,7 @@
 
 @implementation ViewController
 {
-    NSArray *_arrayShareItemTitles;
+    UIActionSheet *_actionSheet;
 }
 
 
@@ -45,7 +48,7 @@
      
      https://developers.facebook.com/docs/ios                 FBSDK下载地址
      https://developers.facebook.com/docs/sharing/ios         FB文档链接
-     https://developers.facebook.com/apps/188914071634418/dashboard/   FB应用创建与管理
+     https://developers.facebook.com/apps/188914071634418/dashboard/   FB应用创建与管理，注意点：如果要对外其他的账号进行测试，需要设置对外开放，像发布分享等权限可添加测试用户的ID进行测试，但是其他用户就只能通过FB的权限审核之后才能使用https://developers.facebook.com/apps/188914071634418/review-status/
      
      //facebook
      //应用编号 188914071634418
@@ -82,6 +85,7 @@
      
      */
     
+    [self showAlertOk:nil message:@"如果网络无法访问国外网站，请使用VPN或Shadowsocks进行翻墙，否则无法发起授权和分享"];
     
     [self setUp_FB];
     [self setUp_TW];
@@ -158,28 +162,26 @@
 //    sendButton.shareContent = content;
 //    ResetOrigin(0, 133, sendButton);
 //    [self.view addSubview:sendButton];
-    
-    
-    
-    
-    _arrayShareItemTitles = @[
-                              @"Share Link",
-                              @"Share Photo",
-                              @"Share Video",
-                              @"Share Open Graph",
-                              @"Share Media",
-                              @"取消",
-                              ];
+
 }
 
 
+- (NSString *)randomMsg
+{
+    NSString *msg = [@">>>>>>>>>>" stringByAppendingFormat:@"%ld", random() % 33235];
+    msg = [msg stringByAppendingFormat:@"j%ldfdxf(%@)", random() % 11, (random() % 335) % 2 == 0 ? @"https://www.twitter.com" : @""];
+    
+    msg = [msg stringByAppendingFormat:@"-%ld=", random() % 11];
+    
+    return msg;
+}
 
 #pragma mark - Click
 - (IBAction)clickTWLogin:(id)sender {
-    
+
     //应用管理必须填写回调的URL， 否则无法使用网页登录
     
-    //不管是使用网页还是app登录， 都会自动登上系统的twiter账户， 下一次登录的时候该方法不再生效
+    //不管是使用网页还是app登录， 都会自动登上系统的twiter账户， 下一次登录的时候不再使用TwitterUI，仅使用返回登录结果TWTRSession （和FB不一样，TW使用keychain保存TWTRSession，无需手动来存储TWTRSession）
     //和FB不一样的是，Twitter的登录方式为web或者系统Twitter账号， 跟你下载的官方TwitterApp没有任何关联； 而且也不用担心授权过期的问题
     //由于使用系统的授权没有任何提示， 所以最好给出明确的提示 要使用系统的Twitter账号
     
@@ -214,6 +216,11 @@
 
 
 - (IBAction)clickTWShare:(id)sender {
+    
+    if (![[Twitter sharedInstance] session]) {
+        ShowAlert(@"请先使用TW授权登录", 1.f);
+        return;
+    }
 
 //    //此种方式，只能发送文字，但是UI上会显示用户头像，发送回执以Delegate的形式返回，需要登录时的TWTRSession；
 //    //TWTRComposerViewController对象有高版本（>=8.0）的TwitterKit中得到
@@ -224,7 +231,7 @@
 //    [self presentViewController:composerVC animated:YES completion:nil];
     
     
-    ShowAlert(@"此方式必须登录系统内置的Twitter账户，否则无法发送", 1.f);
+//    ShowAlert(@"此方式必须登录系统内置的Twitter账户，否则无法发送", 1.f);
     
     //通用形式， 中间小窗弹出；调用的是系统的Twitter账号发推文，如果系统账号没有登录，则无法发出；
     TWTRComposer *composer = [[TWTRComposer alloc] init];
@@ -242,65 +249,143 @@
 }
 
 
-- (IBAction)clickTwSendText:(id)sender {
-    
-    NSString *msg = [@">>>>>>>>>>" stringByAppendingFormat:@"%ld", random() % 33235];
-    
-    ShowAlert(([NSString stringWithFormat:@"发送文字：%@到Twitter", msg]), 1.f);
-    
-    [[[TwitterManager alloc] init] sendTweetWithText:msg completion:^(NSURLResponse * _Nullable response, NSData * _Nullable data, NSError * _Nullable connectionError) {
+- (void)showAlertInput:(void(^)(NSInteger buttonIndex, UIAlertView *alertView))complete
+{
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"" message:@"" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+    alertView.alertViewStyle = UIAlertViewStylePlainTextInput;
+    UITextField *textField = [alertView textFieldAtIndex:0];
+    textField.placeholder = @"请输入推文";
+    [textField becomeFirstResponder];
+    [alertView show:^(NSInteger buttonIndex, UIAlertView *alertView) {
         
-        ShowAlert((!connectionError ? @"发送成功" : [NSString stringWithFormat:@"发送失败：%@", connectionError]), connectionError ? 5 : 1);
+        if (textField.text.length == 0) {
+            [self showAlertInput:complete];
+        }else {
+            complete ? complete(buttonIndex, alertView) : nil;
+        }
         
     }];
 }
 
+
+- (IBAction)clickTwSendText:(id)sender {
+    if (![[Twitter sharedInstance] session]) {
+        ShowAlert(@"请先使用TW授权登录", 1.f);
+        return;
+    }
+    
+    
+    [self showAlertInput:^(NSInteger buttonIndex, UIAlertView *alertView) {
+        
+        UITextField *textField = [alertView textFieldAtIndex:0];
+        NSString *msg = textField.text;
+        ShowAlert(([NSString stringWithFormat:@"发送文字：%@到Twitter", msg]), 2.f);
+        
+        [[[TwitterManager alloc] init] sendTweetWithText:msg completion:^(NSURLResponse * _Nullable response, NSData * _Nullable data, NSError * _Nullable connectionError) {
+            
+            ShowAlert((!connectionError ? @"发送成功" : [NSString stringWithFormat:@"发送失败：%@", connectionError]), connectionError ? 5 : 1);
+            
+        }];
+        
+    }];
+    
+}
+
 - (IBAction)clickTwSendTextAndImages:(id)sender {
-    NSString *msg = [@"惺惺惜惺惺想寻" stringByAppendingFormat:@"%ld", random() % 33235];
+    if (![[Twitter sharedInstance] session]) {
+        ShowAlert(@"请先使用TW授权登录", 1.f);
+        return;
+    }
     
-    ShowAlert(([NSString stringWithFormat:@"发送文字：%@，和两张图片到Twitter", msg]), 1.f);
     
-    [[[TwitterManager alloc] init] sendTweetWithText:msg
-                                            pictures:@[
-                                                       [NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"ShareImage@2x" ofType:@"png"]],
-                                                       [NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"ShareImage@2x" ofType:@"png"]],
-                                                       
-                                                       ]
-                                          completion:^(NSURLResponse * _Nullable response, NSData * _Nullable data, NSError * _Nullable connectionError) {
-                                              ShowAlert((!connectionError ? @"发送成功" : [NSString stringWithFormat:@"发送失败：%@", connectionError]), connectionError ? 5 : 1);
+    [self showAlertInput:^(NSInteger buttonIndex, UIAlertView *alertView) {
+        
+        ;
+        UITextField *textField = [alertView textFieldAtIndex:0];
+        NSString *msg = textField.text;
+        
+        [SelectMedia selectPhotosWithViewControler:self max:4 complete:^(NSArray<UIImage *> *images) {
+            
+            ShowAlert(([NSString stringWithFormat:@"发送文字：%@，和图片到Twitter", msg]), 2.f);
+            
+            NSMutableArray *ay = [NSMutableArray array];
+            [images enumerateObjectsUsingBlock:^(UIImage * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+                [ay addObject:UIImageJPEGRepresentation(obj, 0.5)];
+            }];
+            
+            [[[TwitterManager alloc] init] sendTweetWithText:msg
+                                                    pictures:ay
+                                                  completion:^(NSURLResponse * _Nullable response, NSData * _Nullable data, NSError * _Nullable connectionError) {
+                                                      ShowAlert((!connectionError ? @"发送成功" : [NSString stringWithFormat:@"发送失败：%@", connectionError]), connectionError ? 5 : 1);
+            
+        
+                                                  }];
+        
+        }];
+
         
     }];
 }
 
 - (IBAction)clickTwSendTextAndGif:(id)sender {
-    NSString *msg = [@"++++++++++++https://www.facebook.com +++++++++" stringByAppendingFormat:@"%ld", random() % 33235];
+    if (![[Twitter sharedInstance] session]) {
+        ShowAlert(@"请先使用TW授权登录", 1.f);
+        return;
+    }
     
-    ShowAlert(([NSString stringWithFormat:@"发送文字：%@，和一张Gif图到Twitter", msg]), 1.f);
-    [[[TwitterManager alloc] init] sendTweetWithText:msg
-                                                 gif:[NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"gif" ofType:@"gif"]]
-                                          completion:^(NSURLResponse * _Nullable response, NSData * _Nullable data, NSError * _Nullable connectionError) {
-                                              ShowAlert((!connectionError ? @"发送成功" : [NSString stringWithFormat:@"发送失败：%@", connectionError]), connectionError ? 5 : 1);
-
-                                          }];
-
+    
+    [self showAlertInput:^(NSInteger buttonIndex, UIAlertView *alertView) {
+        
+        UITextField *textField = [alertView textFieldAtIndex:0];
+        NSString *msg = textField.text;
+        ShowAlert(([NSString stringWithFormat:@"发送文字：%@，和一张Gif图到Twitter", msg]), 2.f);
+        
+        [[[TwitterManager alloc] init] sendTweetWithText:msg
+                                                     gif:[NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"gif" ofType:@"gif"]]
+                                              completion:^(NSURLResponse * _Nullable response, NSData * _Nullable data, NSError * _Nullable connectionError) {
+                                                  ShowAlert((!connectionError ? @"发送成功" : [NSString stringWithFormat:@"发送失败：%@", connectionError]), connectionError ? 5 : 1);
+                                                  
+                                              }];
+        
+    }];
 }
 
 - (IBAction)clickTwSendTextAndVideo:(id)sender {
-    NSString *msg = [@"https://www.facebookcom kk" stringByAppendingFormat:@"%ld", random() % 33235];;
+    if (![[Twitter sharedInstance] session]) {
+        ShowAlert(@"请先使用TW授权登录", 1.f);
+        return;
+    }
     
-    ShowAlert(([NSString stringWithFormat:@"发送文字：%@，和视频到Twitter", msg]), 1.f);
-
-//    @"video/mp4"
-//    @"video/quicktime"
     
-    [[[TwitterManager alloc] init] sendTweetWithText:msg
-                                               video:[NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"123" ofType:@"mp4"]]
-                                            MIMEType:@"video/mp4"
-                                          completion:^(NSURLResponse * _Nullable response, NSData * _Nullable data, NSError * _Nullable connectionError) {
-                                              ShowAlert((!connectionError ? @"发送成功" : [NSString stringWithFormat:@"发送失败：%@", connectionError]), connectionError ? 5 : 1);
-
-                                          }];
-
+    [self showAlertInput:^(NSInteger buttonIndex, UIAlertView *alertView) {
+        
+        UITextField *textField = [alertView textFieldAtIndex:0];
+        NSString *msg = textField.text;
+        
+        [SelectMedia selectVideoWithViewControler:self complete:^(NSDictionary<NSString *,id> *info) {
+            
+            if (info) {
+                ShowAlert(([NSString stringWithFormat:@"发送文字：%@，和视频到Twitter", msg]), 2.f);
+                
+                //    @"video/mp4"
+                //    @"video/quicktime"
+                
+                [[[TwitterManager alloc] init] sendTweetWithText:msg
+                                                           video:[NSData  dataWithContentsOfFile:info[UIImagePickerControllerMediaURL]]
+                                                        MIMEType:@"video/quicktime"
+                                                      completion:^(NSURLResponse * _Nullable response, NSData * _Nullable data, NSError * _Nullable connectionError) {
+                                                          ShowAlert((!connectionError ? @"发送成功" : [NSString stringWithFormat:@"发送失败：%@", connectionError]), connectionError ? 5 : 1);
+                                                          
+                                                      }];
+            }else {
+                ShowAlert(@"取消选择视频", 1.f);
+            }
+            
+        }];
+    
+    
+    }];
+    
 }
 
 
@@ -332,16 +417,23 @@
                                          UIActivityTypePostToVimeo,
                                          UIActivityTypePostToTencentWeibo,
                                          UIActivityTypeAirDrop,
-                                         UIActivityTypeOpenInIBooks
+//                                         UIActivityTypeOpenInIBooks
                                          ];
     
     
-    activityVC.completionWithItemsHandler = ^(NSString * __nullable activityType, BOOL completed, NSArray * __nullable returnedItems, NSError * __nullable activityError){
+    if (iOS8AndLater) {
+        activityVC.completionWithItemsHandler = ^(NSString * __nullable activityType, BOOL completed, NSArray * __nullable returnedItems, NSError * __nullable activityError){
+            NSLog(@"completionWithItemsHandler %@  %d  %@  %@", activityType, completed, returnedItems, activityError);// 此处Facebook未登录的情况下分享失败不会给任何原因
+            [[[UIAlertView alloc] initWithTitle:nil message:[NSString stringWithFormat:@"%@ 分享%@", activityType, completed ? @"成功" : @"失败"] delegate:nil cancelButtonTitle:@"ok" otherButtonTitles:nil, nil] show];
+        };
         
-        // 此处Facebook未登录的情况下分享失败不会给任何原因
-        [[[UIAlertView alloc] initWithTitle:nil message:[NSString stringWithFormat:@"%@ 分享%@", activityType, completed ? @"成功" : @"失败"] delegate:nil cancelButtonTitle:@"ok" otherButtonTitles:nil, nil] show];
-        NSLog(@"completionWithItemsHandler %@  %d  %@  %@", activityType, completed, returnedItems, activityError);
-    };
+    }else {
+        activityVC.completionHandler = ^(NSString * __nullable activityType, BOOL completed){
+            
+            NSLog(@"completionWithItemsHandler %@  %d", activityType, completed);// 此处Facebook未登录的情况下分享失败不会给任何原因
+            [[[UIAlertView alloc] initWithTitle:nil message:[NSString stringWithFormat:@"%@ 分享%@", activityType, completed ? @"成功" : @"失败"] delegate:nil cancelButtonTitle:@"ok" otherButtonTitles:nil, nil] show];
+        };
+    }
     
     [self presentViewController:activityVC animated:YES completion:nil];
 }
@@ -369,10 +461,10 @@
     if (![FBSDKAccessToken currentAccessToken]) {
         FBSDKLoginManager *login = [[FBSDKLoginManager alloc] init];
         
-        //        仅授予读取权限；
-        //        [login logInWithReadPermissions:@[@"public_profile"] fromViewController:self handler:^(FBSDKLoginManagerLoginResult *result, NSError *error) {
-        //
-        //        }];
+//        仅授予读取权限；
+//        [login logInWithReadPermissions:@[@"public_profile"] fromViewController:self handler:^(FBSDKLoginManagerLoginResult *result, NSError *error) {
+//
+//        }];
         
         //发布和读取权限都有
         [login logInWithPublishPermissions:@[@"publish_actions"]
@@ -407,8 +499,8 @@
                                                //                                               userID
                                                
                                            }else {
-                                               NSString *msg = [NSString stringWithFormat:@"使用FB授权登录失败%@", error];
-                                               ShowAlert(msg, 1.f);
+                                               NSString *msg = [NSString stringWithFormat:@"使用FB授权登录成功, 当前权限为%@\nuserID:%@", result.token.permissions, result.token.userID];
+                                               [self showAlertOk:nil message:msg];
                                                NSLog(@"授权失败， 具体原因参考 返回结果：%@", result);
                                            }
                                        }
@@ -421,17 +513,35 @@
 
 - (IBAction)clickFBShare:(id)sender
 {
+    FBSDKAccessToken *token = [NSKeyedUnarchiver unarchiveObjectWithFile:kFBLocalTokenPath];
+    
+    //如果token不存在，从本地取出赋值
+    (token && ![FBSDKAccessToken currentAccessToken]) ? [FBSDKAccessToken setCurrentAccessToken:token] : nil;
+    
+    if (![FBSDKAccessToken currentAccessToken]) {
+        ShowAlert(@"请先使用FB授权登录", 1.f);
+        return;
+    }
+
+
+    
     NSURL *shareLinkURL    = [NSURL URLWithString:@"https://www.google.com"];
     UIImage *sharePhoto    = [UIImage imageNamed:@"ShareImage"];
     
     
-    void(^actionHandle)(UIAlertAction *action) = ^(UIAlertAction *action) {
-        
+    [[[UIActionSheet alloc] initWithTitle:@"Share"
+                                 delegate:nil
+                        cancelButtonTitle:@"取消"
+                   destructiveButtonTitle:nil
+                        otherButtonTitles:@"Share Link", @"Share Photo", @"Share Video", @"Share Open Graph", @"Share Media", nil]
+     showInView:self.view
+     complete:^(NSInteger buttonIndex, UIActionSheet *actionSheet){
+    
         //所有的content都支持FBSDKSharingContent协议，测试仅FBSDKShareLinkContent.contentURL有效
         __block id<FBSDKSharingContent> content = nil;
         
-        switch ([_arrayShareItemTitles indexOfObject:action.title]) {
-            case 0:
+        switch (buttonIndex) {
+                case 0:
             {
                 //如果链接是百度或是google之类的， 发出去的内容会打开一部分，  效果不错
                 //如果是个普通链接，就是存文本的形式；
@@ -439,31 +549,33 @@
                 ConvertInstanceClass(FBSDKShareLinkContent, content).quote = shareLinkURL.absoluteString;
             }
                 break;
-            case 01:
+                case 01:
             {
                 content = [[FBSDKSharePhotoContent alloc] init];
-                ConvertInstanceClass(FBSDKSharePhotoContent, content).photos = @[[FBSDKSharePhoto photoWithImage:sharePhoto userGenerated:YES]];
+                __weak typeof(self) wself = self;
+                [SelectMedia selectPhotoWithViewControler:self complete:^(NSDictionary<NSString *,id> *info) {
+                    
+                    if (info) {
+                        ConvertInstanceClass(FBSDKSharePhotoContent, content).photos = @[[FBSDKSharePhoto photoWithImage:info[UIImagePickerControllerEditedImage] userGenerated:YES]];
+                        content.contentURL = shareLinkURL;
+                        [FBSDKShareAPI shareWithContent:content delegate:wself];
+                    }
+                    
+                }];
+                
+                //直接终止，在block里面分享
+                return ;
             }
                 break;
-            case 02:
+                case 02:
             {
-                UIImagePickerController *pickerVC = [[UIImagePickerController alloc] init];
-                //                pickerVC.allowsEditing = YES;
-                //                pickerVC.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
-                //                pickerVC.cameraCaptureMode = UIImagePickerControllerCameraCaptureModeVideo;
-                pickerVC.mediaTypes = @[@"public.movie"];//[UIImagePickerController availableMediaTypesForSourceType:UIImagePickerControllerSourceTypePhotoLibrary];
-                pickerVC.delegate = (id)self;
-                
                 __weak typeof(self) wself = self;
-                pickerVC.callBack = ^(UIImage *image, NSDictionary *info) {
+                [SelectMedia selectVideoWithViewControler:self complete:^(NSDictionary<NSString *,id> *info) {
                     
-                    NSURL *url;
-                    if (image) {
+                    if (info) {
+                        ShowAlert(@"视频上传特别慢，尽量传小视频", 1.f);
                         
-                        //只选择图片
-                    }else if (info) {
-                        //选择视频
-                        url = info[UIImagePickerControllerReferenceURL];
+                        NSURL *url = info[UIImagePickerControllerReferenceURL];
                         
                         //必须配置本地相册访问权限, 发出去的同时没法获取发送进度;    Tips: 网络环境差，发送很慢。。。
                         //会显示由什么应用发布，链接需要在fb后台的app管理里面配置
@@ -471,21 +583,15 @@
                         ConvertInstanceClass(FBSDKShareVideoContent, content).video = [FBSDKShareVideo videoWithVideoURL:url previewPhoto:[FBSDKSharePhoto photoWithImage:sharePhoto userGenerated:YES]];
                         
                         [FBSDKShareAPI shareWithContent:content delegate:wself];
-                        
-                    }else {
-                        //取消选择
-                        NSLog(@"取消选择");
                     }
                     
-                };
-                [self presentViewController:pickerVC animated:YES completion:nil];
+                }];
                 
-                
-                //直接终止，block里面分享
+                //直接终止，在block里面分享
                 return ;
             }
                 break;
-            case 03:
+                case 03:
             {
                 
                 //https://developers.facebook.com/docs/sharing/opengraph/ios
@@ -502,20 +608,20 @@
                 action.actionType = @"books.reads";
                 [action setObject:object forKey:@"books:book"];
                 
-                content = [[FBSDKShareOpenGraphContent alloc] init];
-                ConvertInstanceClass(FBSDKShareOpenGraphContent, content).action = action;
-                ConvertInstanceClass(FBSDKShareOpenGraphContent, content).previewPropertyName =  @"books:book";
+                FBSDKShareOpenGraphContent *content = [[FBSDKShareOpenGraphContent alloc] init];
+                content.action = action;
+                content.previewPropertyName = @"books:book";
             }
                 break;
-            case 04:
+                case 04:
             {
                 
-                //无法分享，分享后无任何回调通知  iPad和iPhone5s  iOS10都无法分享，FB版本为95.0
-                
-                //                用户使用的 iOS 版本至少应为 7.0。
-                //                分享内容的用户应安装 iOS 版 Facebook 客户端版本 52.0 或更高版本。
-                //                每个照片和视频元素的大小必须小于 12MB。
-                //                用户最多可以分享 1 个视频加 29 张照片，或最多分享 30 张照片。
+//                无法分享，分享后无任何回调通知  iPad和iPhone5s  iOS10都无法分享，FB版本为95.0
+//
+//                用户使用的 iOS 版本至少应为 7.0。
+//                分享内容的用户应安装 iOS 版 Facebook 客户端版本 52.0 或更高版本。
+//                每个照片和视频元素的大小必须小于 12MB。
+//                用户最多可以分享 1 个视频加 29 张照片，或最多分享 30 张照片。
                 
                 content = [[FBSDKShareMediaContent alloc] init];
                 ConvertInstanceClass(FBSDKShareMediaContent, content).media = @[
@@ -531,33 +637,18 @@
                 break;
         }
         
-        content.contentURL = shareLinkURL;
-        
-        //直接分享， 不再跳转到fb
-        [FBSDKShareAPI shareWithContent:content delegate:self];
         
         
-        //        //会跳转到fb，显示它的UI进行分享，不好用
-        //        [FBSDKShareDialog showFromViewController:self
-        //                                     withContent:content
-        //                                        delegate:nil];
-        
-    };
-    
-    
-    
-    
-    UIAlertController *vc = [UIAlertController alertControllerWithTitle:@"Share" message:nil preferredStyle:UIAlertControllerStyleActionSheet];
-    
-    [_arrayShareItemTitles enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        
-        UIAlertAction *aciton = [UIAlertAction actionWithTitle:obj style:UIAlertActionStyleDefault handler:actionHandle];
-        
-        [vc addAction:aciton];
+         content.contentURL = shareLinkURL;
+         //直接分享， 不再跳转到fb
+         [FBSDKShareAPI shareWithContent:content delegate:self];
+         
+//        //会跳转到fb，显示它的UI进行分享，不好用
+//        [FBSDKShareDialog showFromViewController:self
+//                                     withContent:content
+//                                        delegate:self];
         
     }];
-    
-    [self presentViewController:vc animated:YES completion:nil];
     
 }
 
@@ -577,28 +668,6 @@
 - (void)sharerDidCancel:(id<FBSDKSharing>)sharer {
     ShowAlert(@"FB取消分享", 2.f);
     NSLog(@"Canceled share");
-}
-
-
-#pragma mark - UIImagePickerControllerDelegate
-
-- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingImage:(UIImage *)image editingInfo:(nullable NSDictionary<NSString *,id> *)editingInfo NS_DEPRECATED_IOS(2_0, 3_0);
-{
-    picker.callBack(image, editingInfo);
-    [picker dismissViewControllerAnimated:YES completion:nil];
-}
-
-- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info;
-{
-    picker.callBack(nil, info);
-    [picker dismissViewControllerAnimated:YES completion:nil];
-}
-
-
-- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker;
-{
-    picker.callBack(nil, nil);
-    [picker dismissViewControllerAnimated:YES completion:nil];
 }
 
 

@@ -21,6 +21,7 @@
 
 #define DictionaryRemoteInfo    [AppDelegateInstance dictionaryRemoteInfo]
 
+
 #pragma mark - 辅助方法
 @interface NSObject (Accessibility)
 

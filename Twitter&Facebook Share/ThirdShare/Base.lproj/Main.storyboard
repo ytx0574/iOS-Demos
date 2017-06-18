@@ -73,7 +73,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eiH-l6-Ghj">
-                                        <rect key="frame" x="177" y="63" width="94" height="30"/>
+                                        <rect key="frame" x="148" y="63" width="123" height="30"/>
                                         <animations/>
                                         <state key="normal" title="TW文字&amp;图片"/>
                                         <connections>
@@ -81,7 +81,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="POo-3d-bB1">
-                                        <rect key="frame" x="170" y="106" width="101" height="30"/>
+                                        <rect key="frame" x="148" y="106" width="123" height="30"/>
                                         <animations/>
                                         <state key="normal" title="TW文字&amp;视频"/>
                                         <connections>
@@ -129,7 +129,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="129" y="349"/>
+            <point key="canvasLocation" x="582" y="368"/>
         </scene>
     </scenes>
 </document>

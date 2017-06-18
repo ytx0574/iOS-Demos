@@ -1,0 +1,40 @@
+PODS:
+  - Bolts (1.8.4):
+    - Bolts/AppLinks (= 1.8.4)
+    - Bolts/Tasks (= 1.8.4)
+  - Bolts/AppLinks (1.8.4):
+    - Bolts/Tasks
+  - Bolts/Tasks (1.8.4)
+  - Fabric (1.5.5):
+    - Fabric/Base (= 1.5.5)
+  - Fabric/Base (1.5.5)
+  - FBSDKCoreKit (4.15.1):
+    - Bolts (~> 1.7)
+  - FBSDKLoginKit (4.15.1):
+    - FBSDKCoreKit
+  - FBSDKShareKit (4.15.1):
+    - FBSDKCoreKit
+  - TwitterCore (1.8.1)
+  - TwitterKit (1.8.1)
+
+DEPENDENCIES:
+  - Bolts (~> 1.8.4)
+  - Fabric (~> 1.5.0)
+  - FBSDKCoreKit (~> 4.15.0)
+  - FBSDKLoginKit (~> 4.15.0)
+  - FBSDKShareKit (~> 4.15.0)
+  - TwitterCore (~> 1.8.0)
+  - TwitterKit (~> 1.8.0)
+
+SPEC CHECKSUMS:
+  Bolts: 8a7995239dbe724f9cba2248b766d48b7ebdd322
+  Fabric: 190bf1a6eb65f7500de1347d027d2e59a7e53db1
+  FBSDKCoreKit: fc7fa53d16b095ee3fd53f0cd59f1df8bcbb634d
+  FBSDKLoginKit: 073f79b3b2e762fc6f54a283fe15f45372d59f5f
+  FBSDKShareKit: 11cbb5a4d7b5fda8143cc95b76188147e6725736
+  TwitterCore: 0a26fb8054bc23d8986344d3dcb6602255b6aec5
+  TwitterKit: 88daaebdb8bfb5847d76d8ae159841248427931d
+
+PODFILE CHECKSUM: 404793a9b2e41ca991d47f61b8b5ce8c4200c10f
+
+COCOAPODS: 1.2.1

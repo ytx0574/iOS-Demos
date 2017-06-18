@@ -1,15 +1,15 @@
 # 此为低版本，最新版本最低要求为8.0
 
 
-platform: ios, '7.0'
+platform :ios, '7.0'
 
 target 'ThirdShare' do
 
 
 pod 'Bolts', '~> 1.8.4'
-pod 'FBSDKCoreKit', '~> 4.23.0'
-pod 'FBSDKShareKit', '~> 4.23.0'
-pod 'FBSDKLoginKit', '~> 4.23.0'
+pod 'FBSDKCoreKit', '~> 4.15.0'
+pod 'FBSDKShareKit', '~> 4.15.0'
+pod 'FBSDKLoginKit', '~> 4.15.0'
 
 pod 'TwitterCore', '~> 1.8.0'
 pod 'TwitterKit', '~> 1.8.0'

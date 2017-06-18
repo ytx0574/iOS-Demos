@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1B8B33931F56DAF6A6CC1229 /* libPods-ThirdShare.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4590C0887B8ACCA308B7215B /* libPods-ThirdShare.a */; };
 		2C4C298A1EE9A4E800D4B812 /* mov.mov in Resources */ = {isa = PBXBuildFile; fileRef = 2C4C29881EE9A4E800D4B812 /* mov.mov */; };
 		2C4C298B1EE9A4E800D4B812 /* gif.gif in Resources */ = {isa = PBXBuildFile; fileRef = 2C4C29891EE9A4E800D4B812 /* gif.gif */; };
 		2C5FCAC31EE9270E00FCA5C3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C5FCAC21EE9270E00FCA5C3 /* main.m */; };
@@ -15,28 +16,33 @@
 		2C5FCACC1EE9270E00FCA5C3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C5FCACA1EE9270E00FCA5C3 /* Main.storyboard */; };
 		2C5FCACE1EE9270E00FCA5C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C5FCACD1EE9270E00FCA5C3 /* Assets.xcassets */; };
 		2C5FCAD11EE9270E00FCA5C3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C5FCACF1EE9270E00FCA5C3 /* LaunchScreen.storyboard */; };
-		2C5FCADE1EE9279100FCA5C3 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C5FCADA1EE9279100FCA5C3 /* Bolts.framework */; };
-		2C5FCADF1EE9279100FCA5C3 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C5FCADB1EE9279100FCA5C3 /* FBSDKShareKit.framework */; };
-		2C5FCAE01EE9279100FCA5C3 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C5FCADC1EE9279100FCA5C3 /* FBSDKCoreKit.framework */; };
-		2C5FCAE11EE9279100FCA5C3 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C5FCADD1EE9279100FCA5C3 /* FBSDKLoginKit.framework */; };
 		2C5FCAE31EE9279F00FCA5C3 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C5FCAE21EE9279F00FCA5C3 /* libsqlite3.tbd */; };
 		2C5FCAE51EE927A300FCA5C3 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C5FCAE41EE927A300FCA5C3 /* Accounts.framework */; };
 		2C5FCAE71EE927A800FCA5C3 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C5FCAE61EE927A800FCA5C3 /* Social.framework */; };
 		2C5FCAEC1EE927D800FCA5C3 /* NSObject+CallBack.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C5FCAEA1EE927D800FCA5C3 /* NSObject+CallBack.m */; };
 		2C5FCAED1EE927D800FCA5C3 /* ShareImage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C5FCAEB1EE927D800FCA5C3 /* ShareImage@2x.png */; };
 		2C5FCAEF1EE92DDB00FCA5C3 /* TwitterSDK来源.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C5FCAEE1EE92DDB00FCA5C3 /* TwitterSDK来源.png */; };
-		2C5FCAF11EE937E600FCA5C3 /* TwitterCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C5FCAF01EE937E600FCA5C3 /* TwitterCore.framework */; };
-		2C5FCAF31EE937EC00FCA5C3 /* TwitterKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C5FCAF21EE937EC00FCA5C3 /* TwitterKit.framework */; };
-		2C5FCAF51EE937F100FCA5C3 /* TwitterKitResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2C5FCAF41EE937F100FCA5C3 /* TwitterKitResources.bundle */; };
-		2C5FCAF71EE9388500FCA5C3 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C5FCAF61EE9388500FCA5C3 /* Fabric.framework */; };
 		2C5FCAFA1EE939E900FCA5C3 /* NSObject+Tools.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C5FCAF91EE939E900FCA5C3 /* NSObject+Tools.m */; };
 		2C8FD3C51EEA51E8008182D5 /* mov_Merge.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 2C8FD3C41EEA51E8008182D5 /* mov_Merge.mp4 */; };
 		2C8FD3CA1EEA545B008182D5 /* TwitterManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C8FD3C91EEA545B008182D5 /* TwitterManager.m */; };
 		2C8FD3CC1EEA76DB008182D5 /* 11.mov in Resources */ = {isa = PBXBuildFile; fileRef = 2C8FD3CB1EEA76DB008182D5 /* 11.mov */; };
 		2C8FD3CE1EEA8224008182D5 /* 123.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 2C8FD3CD1EEA8224008182D5 /* 123.mp4 */; };
+		2CBD979C1EEC452F008116F6 /* SelectMedia.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CBD979B1EEC452F008116F6 /* SelectMedia.m */; };
+		2CBD97B01EEC4944008116F6 /* AGImagePickerController+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CBD979F1EEC4944008116F6 /* AGImagePickerController+Helper.m */; };
+		2CBD97B11EEC4944008116F6 /* AGImagePickerController.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2CBD97A01EEC4944008116F6 /* AGImagePickerController.bundle */; };
+		2CBD97B21EEC4944008116F6 /* AGImagePickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CBD97A21EEC4944008116F6 /* AGImagePickerController.m */; };
+		2CBD97B31EEC4944008116F6 /* AGIPCAlbumsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CBD97A51EEC4944008116F6 /* AGIPCAlbumsController.m */; };
+		2CBD97B41EEC4944008116F6 /* AGIPCAssetsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CBD97A71EEC4944008116F6 /* AGIPCAssetsController.m */; };
+		2CBD97B51EEC4944008116F6 /* AGIPCGridCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CBD97A91EEC4944008116F6 /* AGIPCGridCell.m */; };
+		2CBD97B61EEC4944008116F6 /* AGIPCGridItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CBD97AB1EEC4944008116F6 /* AGIPCGridItem.m */; };
+		2CBD97B71EEC4944008116F6 /* AGIPCToolbarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CBD97AD1EEC4944008116F6 /* AGIPCToolbarItem.m */; };
+		2CBD97B81EEC4944008116F6 /* ALAsset+AGIPC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CBD97AF1EEC4944008116F6 /* ALAsset+AGIPC.m */; };
+		2CBD97BD1EEC55EB008116F6 /* UIActionSheet+Tools.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CBD97BA1EEC55EB008116F6 /* UIActionSheet+Tools.m */; };
+		2CBD97BE1EEC55EB008116F6 /* UIAlertView+Tools.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CBD97BC1EEC55EB008116F6 /* UIAlertView+Tools.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		28BBF20DBB1BEDD3584F4190 /* Pods-ThirdShare.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThirdShare.release.xcconfig"; path = "Pods/Target Support Files/Pods-ThirdShare/Pods-ThirdShare.release.xcconfig"; sourceTree = "<group>"; };
 		2C4C29881EE9A4E800D4B812 /* mov.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = mov.mov; sourceTree = "<group>"; };
 		2C4C29891EE9A4E800D4B812 /* gif.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = gif.gif; sourceTree = "<group>"; };
 		2C5FCABE1EE9270E00FCA5C3 /* ThirdShare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ThirdShare.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -49,10 +55,6 @@
 		2C5FCACD1EE9270E00FCA5C3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2C5FCAD01EE9270E00FCA5C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2C5FCAD21EE9270E00FCA5C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2C5FCADA1EE9279100FCA5C3 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
-		2C5FCADB1EE9279100FCA5C3 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
-		2C5FCADC1EE9279100FCA5C3 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
-		2C5FCADD1EE9279100FCA5C3 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		2C5FCAE21EE9279F00FCA5C3 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		2C5FCAE41EE927A300FCA5C3 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		2C5FCAE61EE927A800FCA5C3 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
@@ -61,10 +63,6 @@
 		2C5FCAEA1EE927D800FCA5C3 /* NSObject+CallBack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+CallBack.m"; sourceTree = "<group>"; };
 		2C5FCAEB1EE927D800FCA5C3 /* ShareImage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ShareImage@2x.png"; sourceTree = "<group>"; };
 		2C5FCAEE1EE92DDB00FCA5C3 /* TwitterSDK来源.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TwitterSDK来源.png"; sourceTree = "<group>"; };
-		2C5FCAF01EE937E600FCA5C3 /* TwitterCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TwitterCore.framework; sourceTree = "<group>"; };
-		2C5FCAF21EE937EC00FCA5C3 /* TwitterKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TwitterKit.framework; sourceTree = "<group>"; };
-		2C5FCAF41EE937F100FCA5C3 /* TwitterKitResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = TwitterKitResources.bundle; sourceTree = "<group>"; };
-		2C5FCAF61EE9388500FCA5C3 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
 		2C5FCAF81EE939E900FCA5C3 /* NSObject+Tools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Tools.h"; sourceTree = "<group>"; };
 		2C5FCAF91EE939E900FCA5C3 /* NSObject+Tools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Tools.m"; sourceTree = "<group>"; };
 		2C8FD3C41EEA51E8008182D5 /* mov_Merge.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = mov_Merge.mp4; sourceTree = "<group>"; };
@@ -72,6 +70,32 @@
 		2C8FD3C91EEA545B008182D5 /* TwitterManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwitterManager.m; sourceTree = "<group>"; };
 		2C8FD3CB1EEA76DB008182D5 /* 11.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = 11.mov; sourceTree = "<group>"; };
 		2C8FD3CD1EEA8224008182D5 /* 123.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = 123.mp4; sourceTree = "<group>"; };
+		2CBD979A1EEC452F008116F6 /* SelectMedia.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectMedia.h; sourceTree = "<group>"; };
+		2CBD979B1EEC452F008116F6 /* SelectMedia.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectMedia.m; sourceTree = "<group>"; };
+		2CBD979E1EEC4944008116F6 /* AGImagePickerController+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AGImagePickerController+Helper.h"; sourceTree = "<group>"; };
+		2CBD979F1EEC4944008116F6 /* AGImagePickerController+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AGImagePickerController+Helper.m"; sourceTree = "<group>"; };
+		2CBD97A01EEC4944008116F6 /* AGImagePickerController.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AGImagePickerController.bundle; sourceTree = "<group>"; };
+		2CBD97A11EEC4944008116F6 /* AGImagePickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGImagePickerController.h; sourceTree = "<group>"; };
+		2CBD97A21EEC4944008116F6 /* AGImagePickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGImagePickerController.m; sourceTree = "<group>"; };
+		2CBD97A31EEC4944008116F6 /* AGImagePickerControllerDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGImagePickerControllerDefines.h; sourceTree = "<group>"; };
+		2CBD97A41EEC4944008116F6 /* AGIPCAlbumsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGIPCAlbumsController.h; sourceTree = "<group>"; };
+		2CBD97A51EEC4944008116F6 /* AGIPCAlbumsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGIPCAlbumsController.m; sourceTree = "<group>"; };
+		2CBD97A61EEC4944008116F6 /* AGIPCAssetsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGIPCAssetsController.h; sourceTree = "<group>"; };
+		2CBD97A71EEC4944008116F6 /* AGIPCAssetsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGIPCAssetsController.m; sourceTree = "<group>"; };
+		2CBD97A81EEC4944008116F6 /* AGIPCGridCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGIPCGridCell.h; sourceTree = "<group>"; };
+		2CBD97A91EEC4944008116F6 /* AGIPCGridCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGIPCGridCell.m; sourceTree = "<group>"; };
+		2CBD97AA1EEC4944008116F6 /* AGIPCGridItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGIPCGridItem.h; sourceTree = "<group>"; };
+		2CBD97AB1EEC4944008116F6 /* AGIPCGridItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGIPCGridItem.m; sourceTree = "<group>"; };
+		2CBD97AC1EEC4944008116F6 /* AGIPCToolbarItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGIPCToolbarItem.h; sourceTree = "<group>"; };
+		2CBD97AD1EEC4944008116F6 /* AGIPCToolbarItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGIPCToolbarItem.m; sourceTree = "<group>"; };
+		2CBD97AE1EEC4944008116F6 /* ALAsset+AGIPC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ALAsset+AGIPC.h"; sourceTree = "<group>"; };
+		2CBD97AF1EEC4944008116F6 /* ALAsset+AGIPC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ALAsset+AGIPC.m"; sourceTree = "<group>"; };
+		2CBD97B91EEC55EB008116F6 /* UIActionSheet+Tools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIActionSheet+Tools.h"; sourceTree = "<group>"; };
+		2CBD97BA1EEC55EB008116F6 /* UIActionSheet+Tools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIActionSheet+Tools.m"; sourceTree = "<group>"; };
+		2CBD97BB1EEC55EB008116F6 /* UIAlertView+Tools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+Tools.h"; sourceTree = "<group>"; };
+		2CBD97BC1EEC55EB008116F6 /* UIAlertView+Tools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+Tools.m"; sourceTree = "<group>"; };
+		4590C0887B8ACCA308B7215B /* libPods-ThirdShare.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ThirdShare.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		868872926282D047A2B5C12A /* Pods-ThirdShare.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThirdShare.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ThirdShare/Pods-ThirdShare.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,15 +104,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				2C5FCAE71EE927A800FCA5C3 /* Social.framework in Frameworks */,
-				2C5FCAF71EE9388500FCA5C3 /* Fabric.framework in Frameworks */,
 				2C5FCAE51EE927A300FCA5C3 /* Accounts.framework in Frameworks */,
 				2C5FCAE31EE9279F00FCA5C3 /* libsqlite3.tbd in Frameworks */,
-				2C5FCADF1EE9279100FCA5C3 /* FBSDKShareKit.framework in Frameworks */,
-				2C5FCAE01EE9279100FCA5C3 /* FBSDKCoreKit.framework in Frameworks */,
-				2C5FCAF11EE937E600FCA5C3 /* TwitterCore.framework in Frameworks */,
-				2C5FCAE11EE9279100FCA5C3 /* FBSDKLoginKit.framework in Frameworks */,
-				2C5FCADE1EE9279100FCA5C3 /* Bolts.framework in Frameworks */,
-				2C5FCAF31EE937EC00FCA5C3 /* TwitterKit.framework in Frameworks */,
+				1B8B33931F56DAF6A6CC1229 /* libPods-ThirdShare.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,11 +116,11 @@
 		2C5FCAB51EE9270E00FCA5C3 = {
 			isa = PBXGroup;
 			children = (
-				2C5FCAD81EE9278000FCA5C3 /* Facebook */,
-				2C5FCAD91EE9278000FCA5C3 /* Twitter */,
 				2C5FCAC01EE9270E00FCA5C3 /* ThirdShare */,
 				2CD0A1971EE9448600DC76B3 /* Framework */,
 				2C5FCABF1EE9270E00FCA5C3 /* Products */,
+				43150DB10C073FE02285537B /* Pods */,
+				31D4114F057D7BE97AAE02AD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -117,10 +135,17 @@
 		2C5FCAC01EE9270E00FCA5C3 /* ThirdShare */ = {
 			isa = PBXGroup;
 			children = (
+				2CBD979D1EEC4944008116F6 /* AGImagePickerController */,
 				2C5FCAF81EE939E900FCA5C3 /* NSObject+Tools.h */,
 				2C5FCAF91EE939E900FCA5C3 /* NSObject+Tools.m */,
+				2CBD97B91EEC55EB008116F6 /* UIActionSheet+Tools.h */,
+				2CBD97BA1EEC55EB008116F6 /* UIActionSheet+Tools.m */,
+				2CBD97BB1EEC55EB008116F6 /* UIAlertView+Tools.h */,
+				2CBD97BC1EEC55EB008116F6 /* UIAlertView+Tools.m */,
 				2C5FCAE91EE927D800FCA5C3 /* NSObject+CallBack.h */,
 				2C5FCAEA1EE927D800FCA5C3 /* NSObject+CallBack.m */,
+				2CBD979A1EEC452F008116F6 /* SelectMedia.h */,
+				2CBD979B1EEC452F008116F6 /* SelectMedia.m */,
 				2C8FD3C81EEA545B008182D5 /* TwitterManager.h */,
 				2C8FD3C91EEA545B008182D5 /* TwitterManager.m */,
 				2C8FD3CD1EEA8224008182D5 /* 123.mp4 */,
@@ -152,26 +177,29 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		2C5FCAD81EE9278000FCA5C3 /* Facebook */ = {
+		2CBD979D1EEC4944008116F6 /* AGImagePickerController */ = {
 			isa = PBXGroup;
 			children = (
-				2C5FCADA1EE9279100FCA5C3 /* Bolts.framework */,
-				2C5FCADB1EE9279100FCA5C3 /* FBSDKShareKit.framework */,
-				2C5FCADC1EE9279100FCA5C3 /* FBSDKCoreKit.framework */,
-				2C5FCADD1EE9279100FCA5C3 /* FBSDKLoginKit.framework */,
+				2CBD979E1EEC4944008116F6 /* AGImagePickerController+Helper.h */,
+				2CBD979F1EEC4944008116F6 /* AGImagePickerController+Helper.m */,
+				2CBD97A01EEC4944008116F6 /* AGImagePickerController.bundle */,
+				2CBD97A11EEC4944008116F6 /* AGImagePickerController.h */,
+				2CBD97A21EEC4944008116F6 /* AGImagePickerController.m */,
+				2CBD97A31EEC4944008116F6 /* AGImagePickerControllerDefines.h */,
+				2CBD97A41EEC4944008116F6 /* AGIPCAlbumsController.h */,
+				2CBD97A51EEC4944008116F6 /* AGIPCAlbumsController.m */,
+				2CBD97A61EEC4944008116F6 /* AGIPCAssetsController.h */,
+				2CBD97A71EEC4944008116F6 /* AGIPCAssetsController.m */,
+				2CBD97A81EEC4944008116F6 /* AGIPCGridCell.h */,
+				2CBD97A91EEC4944008116F6 /* AGIPCGridCell.m */,
+				2CBD97AA1EEC4944008116F6 /* AGIPCGridItem.h */,
+				2CBD97AB1EEC4944008116F6 /* AGIPCGridItem.m */,
+				2CBD97AC1EEC4944008116F6 /* AGIPCToolbarItem.h */,
+				2CBD97AD1EEC4944008116F6 /* AGIPCToolbarItem.m */,
+				2CBD97AE1EEC4944008116F6 /* ALAsset+AGIPC.h */,
+				2CBD97AF1EEC4944008116F6 /* ALAsset+AGIPC.m */,
 			);
-			path = Facebook;
-			sourceTree = "<group>";
-		};
-		2C5FCAD91EE9278000FCA5C3 /* Twitter */ = {
-			isa = PBXGroup;
-			children = (
-				2C5FCAF61EE9388500FCA5C3 /* Fabric.framework */,
-				2C5FCAF41EE937F100FCA5C3 /* TwitterKitResources.bundle */,
-				2C5FCAF21EE937EC00FCA5C3 /* TwitterKit.framework */,
-				2C5FCAF01EE937E600FCA5C3 /* TwitterCore.framework */,
-			);
-			path = Twitter;
+			path = AGImagePickerController;
 			sourceTree = "<group>";
 		};
 		2CD0A1971EE9448600DC76B3 /* Framework */ = {
@@ -184,6 +212,23 @@
 			name = Framework;
 			sourceTree = "<group>";
 		};
+		31D4114F057D7BE97AAE02AD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4590C0887B8ACCA308B7215B /* libPods-ThirdShare.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		43150DB10C073FE02285537B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				868872926282D047A2B5C12A /* Pods-ThirdShare.debug.xcconfig */,
+				28BBF20DBB1BEDD3584F4190 /* Pods-ThirdShare.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -191,9 +236,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2C5FCAD51EE9270E00FCA5C3 /* Build configuration list for PBXNativeTarget "ThirdShare" */;
 			buildPhases = (
+				897B91C8C09268B87D992624 /* [CP] Check Pods Manifest.lock */,
 				2C5FCABA1EE9270E00FCA5C3 /* Sources */,
 				2C5FCABB1EE9270E00FCA5C3 /* Frameworks */,
 				2C5FCABC1EE9270E00FCA5C3 /* Resources */,
+				EF616A0E025A082112E0F96F /* [CP] Embed Pods Frameworks */,
+				BFB0ACDE2510DD5F594A9E74 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -215,7 +263,6 @@
 				TargetAttributes = {
 					2C5FCABD1EE9270E00FCA5C3 = {
 						CreatedOnToolsVersion = 7.1.1;
-						DevelopmentTeam = 2Y2D5R7G89;
 					};
 				};
 			};
@@ -243,6 +290,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2C5FCAD11EE9270E00FCA5C3 /* LaunchScreen.storyboard in Resources */,
+				2CBD97B11EEC4944008116F6 /* AGImagePickerController.bundle in Resources */,
 				2C4C298B1EE9A4E800D4B812 /* gif.gif in Resources */,
 				2C4C298A1EE9A4E800D4B812 /* mov.mov in Resources */,
 				2C5FCACE1EE9270E00FCA5C3 /* Assets.xcassets in Resources */,
@@ -251,24 +299,82 @@
 				2C5FCAED1EE927D800FCA5C3 /* ShareImage@2x.png in Resources */,
 				2C8FD3CE1EEA8224008182D5 /* 123.mp4 in Resources */,
 				2C8FD3CC1EEA76DB008182D5 /* 11.mov in Resources */,
-				2C5FCAF51EE937F100FCA5C3 /* TwitterKitResources.bundle in Resources */,
 				2C5FCACC1EE9270E00FCA5C3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		897B91C8C09268B87D992624 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		BFB0ACDE2510DD5F594A9E74 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ThirdShare/Pods-ThirdShare-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EF616A0E025A082112E0F96F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ThirdShare/Pods-ThirdShare-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		2C5FCABA1EE9270E00FCA5C3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2CBD97B31EEC4944008116F6 /* AGIPCAlbumsController.m in Sources */,
+				2CBD97BD1EEC55EB008116F6 /* UIActionSheet+Tools.m in Sources */,
+				2CBD97BE1EEC55EB008116F6 /* UIAlertView+Tools.m in Sources */,
 				2C5FCAC91EE9270E00FCA5C3 /* ViewController.m in Sources */,
+				2CBD97B41EEC4944008116F6 /* AGIPCAssetsController.m in Sources */,
 				2C5FCAC61EE9270E00FCA5C3 /* AppDelegate.m in Sources */,
+				2CBD97B51EEC4944008116F6 /* AGIPCGridCell.m in Sources */,
 				2C5FCAFA1EE939E900FCA5C3 /* NSObject+Tools.m in Sources */,
+				2CBD979C1EEC452F008116F6 /* SelectMedia.m in Sources */,
+				2CBD97B81EEC4944008116F6 /* ALAsset+AGIPC.m in Sources */,
 				2C8FD3CA1EEA545B008182D5 /* TwitterManager.m in Sources */,
 				2C5FCAEC1EE927D800FCA5C3 /* NSObject+CallBack.m in Sources */,
+				2CBD97B01EEC4944008116F6 /* AGImagePickerController+Helper.m in Sources */,
+				2CBD97B61EEC4944008116F6 /* AGIPCGridItem.m in Sources */,
 				2C5FCAC31EE9270E00FCA5C3 /* main.m in Sources */,
+				2CBD97B21EEC4944008116F6 /* AGImagePickerController.m in Sources */,
+				2CBD97B71EEC4944008116F6 /* AGIPCToolbarItem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -330,7 +436,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -368,7 +474,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -378,8 +484,11 @@
 		};
 		2C5FCAD61EE9270E00FCA5C3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 868872926282D047A2B5C12A /* Pods-ThirdShare.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: James Spicuzza (46PW77UG7M)";
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Facebook",
@@ -388,15 +497,21 @@
 				INFOPLIST_FILE = ThirdShare/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.crisisgo.ThirdShare;
+				PRODUCT_BUNDLE_IDENTIFIER = com.crisisgo.crisisgo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "bead5c0b-0a76-4184-8fad-c76e0c0c0f5a";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		2C5FCAD71EE9270E00FCA5C3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 28BBF20DBB1BEDD3584F4190 /* Pods-ThirdShare.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: The Tech Road, Inc. (U44BAP3BB6)";
+				DEVELOPMENT_TEAM = U44BAP3BB6;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Facebook",
@@ -405,8 +520,11 @@
 				INFOPLIST_FILE = ThirdShare/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.crisisgo.ThirdShare;
+				PRODUCT_BUNDLE_IDENTIFIER = com.crisisgo.crisisgo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "5ed56af6-31a7-43c0-acad-1e8e4fa27576";
+				PROVISIONING_PROFILE_SPECIFIER = crisisgodis0531;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

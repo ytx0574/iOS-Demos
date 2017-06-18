@@ -73,8 +73,6 @@ FileType file_type_number(NSData *data)
 - (void)sendTweetWithText:(NSString *)text pictures:(NSArray <NSData *> *)pictures completion:(TWTRNetworkCompletion)completion
 {
     
-    
-    
     if (pictures.count == 0) {
         NSAssert(NO, @"至少要有一张图片");
     }if (pictures.count > 4) {

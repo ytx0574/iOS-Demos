@@ -1,0 +1,25 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "1f809885-3392-45da-a697-5f0f385d6644",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+    "1f809885-3392-45da-a697-5f0f385d6644" : {
+
+    }
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "1f809885-3392-45da-a697-5f0f385d6644" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "50D6E2FD-B4E1-458F-8046-808482E22DAC",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "1f809885-3392-45da-a697-5f0f385d6644" : "crisisgo_ios_refactor\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "ThirdShare",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "documents\/Facebook&Twiter分享\/ThirdShare\/ThirdShare.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/125.69.90.110:1010\/svn\/crisisgo_ios_refactor",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Subversion",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "1f809885-3392-45da-a697-5f0f385d6644"
+    }
+  ]
+}
