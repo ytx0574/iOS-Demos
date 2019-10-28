@@ -102,7 +102,7 @@
 //    // 创建播放器
     _player = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:nil];
     [_player prepareToPlay];
-    [_player setVolume:0.0];//完全无声
+    [_player setVolume:1];//完全无声
     _player.numberOfLoops = -1; //设置音乐播放次数  -1为一直循环
     [_player play]; //播放
     

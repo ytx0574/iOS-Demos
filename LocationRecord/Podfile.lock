@@ -1,0 +1,37 @@
+PODS:
+  - Aspects (1.4.1)
+  - BmobSDK (2.2.8)
+  - FBRetainCycleDetector (0.1.4)
+  - FLEX (2.4.0)
+  - Masonry (1.1.0)
+  - MJExtension (3.0.13)
+  - MLeaksFinder (0.2.0):
+    - FBRetainCycleDetector
+  - ReactiveObjC (3.1.0)
+  - SVProgressHUD (2.2.5)
+
+DEPENDENCIES:
+  - Aspects (~> 1.4.1)
+  - BmobSDK
+  - FBRetainCycleDetector (~> 0.1.4)
+  - FLEX (~> 2.4.0)
+  - Masonry
+  - MJExtension
+  - MLeaksFinder (= 0.2.0)
+  - ReactiveObjC (~> 3.1.0)
+  - SVProgressHUD
+
+SPEC CHECKSUMS:
+  Aspects: 7595ba96a6727a58ebcbfc954497fc5d2fdde546
+  BmobSDK: 8ee987736c9b766a688ea8e0274ce4748db2255e
+  FBRetainCycleDetector: 46f8179bbb1c587deee3ea838a1a3ee02acf5015
+  FLEX: bd1a39e55b56bb413b6f1b34b3c10a0dc44ef079
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  MJExtension: 5932755f451458eefa24239358817f8d291240c7
+  MLeaksFinder: 07ab450d72d3bf5ef4201b74047d74ceae66d605
+  ReactiveObjC: 2a38ea15335de4119d8b17caf1db1484f61db902
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
+
+PODFILE CHECKSUM: 39629c4bccadeba12ac15b0e248ee9619ecb309d
+
+COCOAPODS: 1.4.0

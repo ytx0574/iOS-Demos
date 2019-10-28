@@ -1,0 +1,88 @@
+
+
+
+Application ID:       3c58bd4997a99bd0de7c647d7db908c4
+REST API Key:         c1c27c853cb16e31ef7ae47518c0f705
+Secret Key:           4946eb63067062b0
+Master Key:           0cf03b719e93660221f70e9fdd169360
+
+
+
+
+设置应用的BmobKey
+在你的XCode工程中的AppDelegate.m文件中创建应用Key，填入申请的授权Key（SDK使用的是应用密钥里的Application ID），示例如下：
+
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions{
+[Bmob registerWithAppKey:@"申请的Application ID"];
+return YES;
+}
+也可以在在main.m文件中，引入头文件 #import <BmobSDK/Bmob.h>
+
+int main(int argc, char * argv[])
+{
+
+@autoreleasepool {
+NSString *appKey = @"申请的Application ID";
+[Bmob registerWithAppKey:appKey];
+
+return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate                     class]));
+}
+}
+添加一行数据
+//往GameScore表添加一条playerName为小明，分数为78的数据
+BmobObject *gameScore = [BmobObject objectWithClassName:@"GameScore"];
+[gameScore setObject:@"小明" forKey:@"playerName"];
+[gameScore setObject:@78 forKey:@"score"];
+[gameScore setObject:[NSNumber numberWithBool:YES] forKey:@"cheatMode"];
+[gameScore saveInBackgroundWithResultBlock:^(BOOL isSuccessful, NSError *error) {
+//进行操作
+}];
+获取一行数据
+//查找GameScore表
+BmobQuery   *bquery = [BmobQuery queryWithClassName:@"GameScore"];
+//查找GameScore表里面id为0c6db13c的数据
+[bquery getObjectInBackgroundWithId:@"0c6db13c" block:^(BmobObject *object,NSError *error){
+if (error){
+//进行错误处理
+}else{
+//表里有id为0c6db13c的数据
+if (object) {
+//得到playerName和cheatMode
+NSString *playerName = [object objectForKey:@"playerName"];
+BOOL cheatMode = [[object objectForKey:@"cheatMode"] boolValue];
+NSLog(@"%@----%i",playerName,cheatMode);
+}
+}
+}];
+修改一行数据
+//查找GameScore表
+BmobQuery   *bquery = [BmobQuery queryWithClassName:@"GameScore"];
+//查找GameScore表里面id为0c6db13c的数据
+[bquery getObjectInBackgroundWithId:@"0c6db13c" block:^(BmobObject *object,NSError *error){
+//没有返回错误
+if (!error) {
+//对象存在
+if (object) {
+BmobObject *obj1 = [BmobObject objectWithoutDatatWithClassName:object.className objectId:object.objectId];
+//设置cheatMode为YES
+[obj1 setObject:[NSNumber numberWithBool:YES] forKey:@"cheatMode"];
+//异步更新数据
+[obj1 updateInBackground];
+}
+}else{
+//进行错误处理
+}
+}];
+删除一行数据
+BmobQuery *bquery = [BmobQuery queryWithClassName:@"GameScore"];
+[bquery getObjectInBackgroundWithId:@"0c6db13c" block:^(BmobObject *object, NSError *error){
+if (error) {
+//进行错误处理
+}
+else{
+if (object) {
+//异步删除object
+[object deleteInBackground];
+}
+}
+}];

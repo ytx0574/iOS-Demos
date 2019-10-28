@@ -1,0 +1,27 @@
+platform :ios, '8.0' #手机的系统 
+
+target 'GaodeMap' do #工程名字 
+	pod 'AMapSearch'  #搜索功能
+	pod 'AMapLocation' #定位功能
+	pod 'AMapNavi' #导航. 包含3D地图
+    pod 'AVOSCloud', '11.6.3'  #LearnCloud
+    
+	pod 'AFNetworking', '3.2.1'
+    pod 'SDWebImage', '4.4.2'
+    pod 'SDWebImage/GIF'
+    pod 'FLAnimatedImage', '~> 1.0'
+    pod 'MBProgressHUD', '1.1.0'
+    pod 'Masonry', '1.1.0'
+    pod 'MJRefresh', '3.1.15.7'
+    pod 'MJExtension', '3.0.17'
+    pod 'ReactiveObjC', '3.1.0'
+    pod 'Aspects', '1.4.1'
+    pod 'NerdyUI', '1.2.1'
+    pod 'IQKeyboardManager', '5.0.8'
+#    pod 'MWPhotoBrowser', '0.0.1'
+    pod 'DACircularProgress', '2.3.1'
+
+    pod 'FLEX', :configurations => ['Debug']
+    pod 'FBRetainCycleDetector', :configurations => ['Debug']
+    pod 'MLeaksFinder', :configurations => ['Debug']
+end

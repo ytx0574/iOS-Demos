@@ -1,0 +1,15 @@
+target "Xt" do
+
+pod 'Masonry'
+pod 'BmobSDK'
+pod 'Aspects', '~> 1.4.1'
+pod 'ReactiveObjC', '~> 3.1.0'
+pod 'SVProgressHUD'
+pod 'MJExtension'
+
+
+pod 'FLEX', '~> 2.4.0', :configurations => ['Debug']
+pod 'FBRetainCycleDetector', '~> 0.1.4', :configurations => ['Debug']
+pod 'MLeaksFinder', '0.2.0', :configurations => ['Debug']
+
+end
