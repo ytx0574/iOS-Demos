@@ -1,0 +1,486 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2C29D63E22F7CE050078C7BA /* 重庆九龙坡区.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 2C29D63622F7CE050078C7BA /* 重庆九龙坡区.gpx */; };
+		2C29D63F22F7CE050078C7BA /* 成都华阳家乐福.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 2C29D63722F7CE050078C7BA /* 成都华阳家乐福.gpx */; };
+		2C29D64022F7CE050078C7BA /* 北京国际机场.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 2C29D63822F7CE050078C7BA /* 北京国际机场.gpx */; };
+		2C29D64122F7CE050078C7BA /* 邻水县红帆广场.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 2C29D63922F7CE050078C7BA /* 邻水县红帆广场.gpx */; };
+		2C29D64222F7CE050078C7BA /* 重庆市合川区教育局.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 2C29D63A22F7CE050078C7BA /* 重庆市合川区教育局.gpx */; };
+		2C29D64322F7CE050078C7BA /* 邻水县牟家镇.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 2C29D63B22F7CE050078C7BA /* 邻水县牟家镇.gpx */; };
+		2C29D64422F7CE050078C7BA /* 黔江体育馆.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 2C29D63C22F7CE050078C7BA /* 黔江体育馆.gpx */; };
+		2C29D64522F7CE050078C7BA /* 重庆渝中区.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 2C29D63D22F7CE050078C7BA /* 重庆渝中区.gpx */; };
+		2C3C475722F6F403006F1B41 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C3C475622F6F403006F1B41 /* AppDelegate.m */; };
+		2C3C475A22F6F403006F1B41 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C3C475922F6F403006F1B41 /* ViewController.m */; };
+		2C3C475D22F6F403006F1B41 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C3C475B22F6F403006F1B41 /* Main.storyboard */; };
+		2C3C475F22F6F405006F1B41 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C3C475E22F6F405006F1B41 /* Assets.xcassets */; };
+		2C3C476222F6F405006F1B41 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C3C476022F6F405006F1B41 /* LaunchScreen.storyboard */; };
+		2C3C476522F6F405006F1B41 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C3C476422F6F405006F1B41 /* main.m */; };
+		2C3C478E22F6F449006F1B41 /* TZImageCropManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C3C477122F6F448006F1B41 /* TZImageCropManager.m */; };
+		2C3C478F22F6F449006F1B41 /* TZAssetCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C3C477322F6F448006F1B41 /* TZAssetCell.m */; };
+		2C3C479022F6F449006F1B41 /* TZVideoPlayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C3C477422F6F448006F1B41 /* TZVideoPlayerController.m */; };
+		2C3C479122F6F449006F1B41 /* TZAssetModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C3C477522F6F448006F1B41 /* TZAssetModel.m */; };
+		2C3C479222F6F449006F1B41 /* NSBundle+TZImagePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C3C477622F6F448006F1B41 /* NSBundle+TZImagePicker.m */; };
+		2C3C479322F6F449006F1B41 /* UIView+Layout.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C3C477922F6F448006F1B41 /* UIView+Layout.m */; };
+		2C3C479422F6F449006F1B41 /* TZPhotoPreviewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C3C477A22F6F448006F1B41 /* TZPhotoPreviewController.m */; };
+		2C3C479522F6F449006F1B41 /* TZImagePickerController.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2C3C477B22F6F448006F1B41 /* TZImagePickerController.bundle */; };
+		2C3C479622F6F449006F1B41 /* TZProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C3C477C22F6F448006F1B41 /* TZProgressView.m */; };
+		2C3C479722F6F449006F1B41 /* TZImageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C3C478022F6F449006F1B41 /* TZImageManager.m */; };
+		2C3C479822F6F449006F1B41 /* TZPhotoPickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C3C478222F6F449006F1B41 /* TZPhotoPickerController.m */; };
+		2C3C479922F6F449006F1B41 /* TZPhotoPreviewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C3C478322F6F449006F1B41 /* TZPhotoPreviewCell.m */; };
+		2C3C479A22F6F449006F1B41 /* TZImagePickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C3C478922F6F449006F1B41 /* TZImagePickerController.m */; };
+		2C3C479B22F6F449006F1B41 /* TZLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C3C478A22F6F449006F1B41 /* TZLocationManager.m */; };
+		2C3C479C22F6F449006F1B41 /* TZGifPhotoPreviewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C3C478B22F6F449006F1B41 /* TZGifPhotoPreviewController.m */; };
+		2C3C479D22F6F449006F1B41 /* TZImageRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C3C478C22F6F449006F1B41 /* TZImageRequestOperation.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		2C29D63622F7CE050078C7BA /* 重庆九龙坡区.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "重庆九龙坡区.gpx"; sourceTree = "<group>"; };
+		2C29D63722F7CE050078C7BA /* 成都华阳家乐福.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "成都华阳家乐福.gpx"; sourceTree = "<group>"; };
+		2C29D63822F7CE050078C7BA /* 北京国际机场.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "北京国际机场.gpx"; sourceTree = "<group>"; };
+		2C29D63922F7CE050078C7BA /* 邻水县红帆广场.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "邻水县红帆广场.gpx"; sourceTree = "<group>"; };
+		2C29D63A22F7CE050078C7BA /* 重庆市合川区教育局.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "重庆市合川区教育局.gpx"; sourceTree = "<group>"; };
+		2C29D63B22F7CE050078C7BA /* 邻水县牟家镇.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "邻水县牟家镇.gpx"; sourceTree = "<group>"; };
+		2C29D63C22F7CE050078C7BA /* 黔江体育馆.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "黔江体育馆.gpx"; sourceTree = "<group>"; };
+		2C29D63D22F7CE050078C7BA /* 重庆渝中区.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "重庆渝中区.gpx"; sourceTree = "<group>"; };
+		2C3C475222F6F403006F1B41 /* Tjojo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tjojo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2C3C475522F6F403006F1B41 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		2C3C475622F6F403006F1B41 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		2C3C475822F6F403006F1B41 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		2C3C475922F6F403006F1B41 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		2C3C475C22F6F403006F1B41 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2C3C475E22F6F405006F1B41 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2C3C476122F6F405006F1B41 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2C3C476322F6F405006F1B41 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2C3C476422F6F405006F1B41 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2C3C476F22F6F448006F1B41 /* TZPhotoPreviewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TZPhotoPreviewCell.h; sourceTree = "<group>"; };
+		2C3C477022F6F448006F1B41 /* TZPhotoPickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TZPhotoPickerController.h; sourceTree = "<group>"; };
+		2C3C477122F6F448006F1B41 /* TZImageCropManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TZImageCropManager.m; sourceTree = "<group>"; };
+		2C3C477222F6F448006F1B41 /* TZImageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TZImageManager.h; sourceTree = "<group>"; };
+		2C3C477322F6F448006F1B41 /* TZAssetCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TZAssetCell.m; sourceTree = "<group>"; };
+		2C3C477422F6F448006F1B41 /* TZVideoPlayerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TZVideoPlayerController.m; sourceTree = "<group>"; };
+		2C3C477522F6F448006F1B41 /* TZAssetModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TZAssetModel.m; sourceTree = "<group>"; };
+		2C3C477622F6F448006F1B41 /* NSBundle+TZImagePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+TZImagePicker.m"; sourceTree = "<group>"; };
+		2C3C477722F6F448006F1B41 /* TZLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TZLocationManager.h; sourceTree = "<group>"; };
+		2C3C477822F6F448006F1B41 /* TZImagePickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TZImagePickerController.h; sourceTree = "<group>"; };
+		2C3C477922F6F448006F1B41 /* UIView+Layout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Layout.m"; sourceTree = "<group>"; };
+		2C3C477A22F6F448006F1B41 /* TZPhotoPreviewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TZPhotoPreviewController.m; sourceTree = "<group>"; };
+		2C3C477B22F6F448006F1B41 /* TZImagePickerController.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = TZImagePickerController.bundle; sourceTree = "<group>"; };
+		2C3C477C22F6F448006F1B41 /* TZProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TZProgressView.m; sourceTree = "<group>"; };
+		2C3C477D22F6F448006F1B41 /* TZGifPhotoPreviewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TZGifPhotoPreviewController.h; sourceTree = "<group>"; };
+		2C3C477E22F6F449006F1B41 /* TZImageRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TZImageRequestOperation.h; sourceTree = "<group>"; };
+		2C3C477F22F6F449006F1B41 /* TZAssetCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TZAssetCell.h; sourceTree = "<group>"; };
+		2C3C478022F6F449006F1B41 /* TZImageManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TZImageManager.m; sourceTree = "<group>"; };
+		2C3C478122F6F449006F1B41 /* TZImageCropManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TZImageCropManager.h; sourceTree = "<group>"; };
+		2C3C478222F6F449006F1B41 /* TZPhotoPickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TZPhotoPickerController.m; sourceTree = "<group>"; };
+		2C3C478322F6F449006F1B41 /* TZPhotoPreviewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TZPhotoPreviewCell.m; sourceTree = "<group>"; };
+		2C3C478422F6F449006F1B41 /* NSBundle+TZImagePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBundle+TZImagePicker.h"; sourceTree = "<group>"; };
+		2C3C478522F6F449006F1B41 /* TZAssetModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TZAssetModel.h; sourceTree = "<group>"; };
+		2C3C478622F6F449006F1B41 /* TZVideoPlayerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TZVideoPlayerController.h; sourceTree = "<group>"; };
+		2C3C478722F6F449006F1B41 /* TZPhotoPreviewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TZPhotoPreviewController.h; sourceTree = "<group>"; };
+		2C3C478822F6F449006F1B41 /* UIView+Layout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Layout.h"; sourceTree = "<group>"; };
+		2C3C478922F6F449006F1B41 /* TZImagePickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TZImagePickerController.m; sourceTree = "<group>"; };
+		2C3C478A22F6F449006F1B41 /* TZLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TZLocationManager.m; sourceTree = "<group>"; };
+		2C3C478B22F6F449006F1B41 /* TZGifPhotoPreviewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TZGifPhotoPreviewController.m; sourceTree = "<group>"; };
+		2C3C478C22F6F449006F1B41 /* TZImageRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TZImageRequestOperation.m; sourceTree = "<group>"; };
+		2C3C478D22F6F449006F1B41 /* TZProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TZProgressView.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2C3C474F22F6F403006F1B41 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2C29D63522F7CE050078C7BA /* SimulatePlace */ = {
+			isa = PBXGroup;
+			children = (
+				2C29D63622F7CE050078C7BA /* 重庆九龙坡区.gpx */,
+				2C29D63722F7CE050078C7BA /* 成都华阳家乐福.gpx */,
+				2C29D63822F7CE050078C7BA /* 北京国际机场.gpx */,
+				2C29D63922F7CE050078C7BA /* 邻水县红帆广场.gpx */,
+				2C29D63A22F7CE050078C7BA /* 重庆市合川区教育局.gpx */,
+				2C29D63B22F7CE050078C7BA /* 邻水县牟家镇.gpx */,
+				2C29D63C22F7CE050078C7BA /* 黔江体育馆.gpx */,
+				2C29D63D22F7CE050078C7BA /* 重庆渝中区.gpx */,
+			);
+			path = SimulatePlace;
+			sourceTree = "<group>";
+		};
+		2C3C474922F6F403006F1B41 = {
+			isa = PBXGroup;
+			children = (
+				2C29D63522F7CE050078C7BA /* SimulatePlace */,
+				2C3C476E22F6F448006F1B41 /* TZImagePickerController */,
+				2C3C475422F6F403006F1B41 /* Tjojo */,
+				2C3C475322F6F403006F1B41 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2C3C475322F6F403006F1B41 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2C3C475222F6F403006F1B41 /* Tjojo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2C3C475422F6F403006F1B41 /* Tjojo */ = {
+			isa = PBXGroup;
+			children = (
+				2C3C475522F6F403006F1B41 /* AppDelegate.h */,
+				2C3C475622F6F403006F1B41 /* AppDelegate.m */,
+				2C3C475822F6F403006F1B41 /* ViewController.h */,
+				2C3C475922F6F403006F1B41 /* ViewController.m */,
+				2C3C475B22F6F403006F1B41 /* Main.storyboard */,
+				2C3C475E22F6F405006F1B41 /* Assets.xcassets */,
+				2C3C476022F6F405006F1B41 /* LaunchScreen.storyboard */,
+				2C3C476322F6F405006F1B41 /* Info.plist */,
+				2C3C476422F6F405006F1B41 /* main.m */,
+			);
+			path = Tjojo;
+			sourceTree = "<group>";
+		};
+		2C3C476E22F6F448006F1B41 /* TZImagePickerController */ = {
+			isa = PBXGroup;
+			children = (
+				2C3C476F22F6F448006F1B41 /* TZPhotoPreviewCell.h */,
+				2C3C477022F6F448006F1B41 /* TZPhotoPickerController.h */,
+				2C3C477122F6F448006F1B41 /* TZImageCropManager.m */,
+				2C3C477222F6F448006F1B41 /* TZImageManager.h */,
+				2C3C477322F6F448006F1B41 /* TZAssetCell.m */,
+				2C3C477422F6F448006F1B41 /* TZVideoPlayerController.m */,
+				2C3C477522F6F448006F1B41 /* TZAssetModel.m */,
+				2C3C477622F6F448006F1B41 /* NSBundle+TZImagePicker.m */,
+				2C3C477722F6F448006F1B41 /* TZLocationManager.h */,
+				2C3C477822F6F448006F1B41 /* TZImagePickerController.h */,
+				2C3C477922F6F448006F1B41 /* UIView+Layout.m */,
+				2C3C477A22F6F448006F1B41 /* TZPhotoPreviewController.m */,
+				2C3C477B22F6F448006F1B41 /* TZImagePickerController.bundle */,
+				2C3C477C22F6F448006F1B41 /* TZProgressView.m */,
+				2C3C477D22F6F448006F1B41 /* TZGifPhotoPreviewController.h */,
+				2C3C477E22F6F449006F1B41 /* TZImageRequestOperation.h */,
+				2C3C477F22F6F449006F1B41 /* TZAssetCell.h */,
+				2C3C478022F6F449006F1B41 /* TZImageManager.m */,
+				2C3C478122F6F449006F1B41 /* TZImageCropManager.h */,
+				2C3C478222F6F449006F1B41 /* TZPhotoPickerController.m */,
+				2C3C478322F6F449006F1B41 /* TZPhotoPreviewCell.m */,
+				2C3C478422F6F449006F1B41 /* NSBundle+TZImagePicker.h */,
+				2C3C478522F6F449006F1B41 /* TZAssetModel.h */,
+				2C3C478622F6F449006F1B41 /* TZVideoPlayerController.h */,
+				2C3C478722F6F449006F1B41 /* TZPhotoPreviewController.h */,
+				2C3C478822F6F449006F1B41 /* UIView+Layout.h */,
+				2C3C478922F6F449006F1B41 /* TZImagePickerController.m */,
+				2C3C478A22F6F449006F1B41 /* TZLocationManager.m */,
+				2C3C478B22F6F449006F1B41 /* TZGifPhotoPreviewController.m */,
+				2C3C478C22F6F449006F1B41 /* TZImageRequestOperation.m */,
+				2C3C478D22F6F449006F1B41 /* TZProgressView.h */,
+			);
+			path = TZImagePickerController;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2C3C475122F6F403006F1B41 /* Tjojo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2C3C476822F6F405006F1B41 /* Build configuration list for PBXNativeTarget "Tjojo" */;
+			buildPhases = (
+				2C3C474E22F6F403006F1B41 /* Sources */,
+				2C3C474F22F6F403006F1B41 /* Frameworks */,
+				2C3C475022F6F403006F1B41 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Tjojo;
+			productName = Tjojo;
+			productReference = 2C3C475222F6F403006F1B41 /* Tjojo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2C3C474A22F6F403006F1B41 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = Johnson;
+				TargetAttributes = {
+					2C3C475122F6F403006F1B41 = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
+				};
+			};
+			buildConfigurationList = 2C3C474D22F6F403006F1B41 /* Build configuration list for PBXProject "Tjojo" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2C3C474922F6F403006F1B41;
+			productRefGroup = 2C3C475322F6F403006F1B41 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2C3C475122F6F403006F1B41 /* Tjojo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2C3C475022F6F403006F1B41 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2C29D64022F7CE050078C7BA /* 北京国际机场.gpx in Resources */,
+				2C29D64322F7CE050078C7BA /* 邻水县牟家镇.gpx in Resources */,
+				2C29D64422F7CE050078C7BA /* 黔江体育馆.gpx in Resources */,
+				2C29D64222F7CE050078C7BA /* 重庆市合川区教育局.gpx in Resources */,
+				2C3C476222F6F405006F1B41 /* LaunchScreen.storyboard in Resources */,
+				2C29D64522F7CE050078C7BA /* 重庆渝中区.gpx in Resources */,
+				2C29D63E22F7CE050078C7BA /* 重庆九龙坡区.gpx in Resources */,
+				2C3C479522F6F449006F1B41 /* TZImagePickerController.bundle in Resources */,
+				2C3C475F22F6F405006F1B41 /* Assets.xcassets in Resources */,
+				2C3C475D22F6F403006F1B41 /* Main.storyboard in Resources */,
+				2C29D63F22F7CE050078C7BA /* 成都华阳家乐福.gpx in Resources */,
+				2C29D64122F7CE050078C7BA /* 邻水县红帆广场.gpx in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2C3C474E22F6F403006F1B41 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2C3C479422F6F449006F1B41 /* TZPhotoPreviewController.m in Sources */,
+				2C3C479222F6F449006F1B41 /* NSBundle+TZImagePicker.m in Sources */,
+				2C3C479122F6F449006F1B41 /* TZAssetModel.m in Sources */,
+				2C3C479922F6F449006F1B41 /* TZPhotoPreviewCell.m in Sources */,
+				2C3C475A22F6F403006F1B41 /* ViewController.m in Sources */,
+				2C3C479822F6F449006F1B41 /* TZPhotoPickerController.m in Sources */,
+				2C3C479022F6F449006F1B41 /* TZVideoPlayerController.m in Sources */,
+				2C3C479A22F6F449006F1B41 /* TZImagePickerController.m in Sources */,
+				2C3C479C22F6F449006F1B41 /* TZGifPhotoPreviewController.m in Sources */,
+				2C3C479B22F6F449006F1B41 /* TZLocationManager.m in Sources */,
+				2C3C479622F6F449006F1B41 /* TZProgressView.m in Sources */,
+				2C3C476522F6F405006F1B41 /* main.m in Sources */,
+				2C3C479722F6F449006F1B41 /* TZImageManager.m in Sources */,
+				2C3C479D22F6F449006F1B41 /* TZImageRequestOperation.m in Sources */,
+				2C3C478F22F6F449006F1B41 /* TZAssetCell.m in Sources */,
+				2C3C478E22F6F449006F1B41 /* TZImageCropManager.m in Sources */,
+				2C3C479322F6F449006F1B41 /* UIView+Layout.m in Sources */,
+				2C3C475722F6F403006F1B41 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		2C3C475B22F6F403006F1B41 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2C3C475C22F6F403006F1B41 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		2C3C476022F6F405006F1B41 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2C3C476122F6F405006F1B41 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2C3C476622F6F405006F1B41 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		2C3C476722F6F405006F1B41 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2C3C476922F6F405006F1B41 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 62W3ZAMLSW;
+				INFOPLIST_FILE = Tjojo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.johnson.Tjojo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2C3C476A22F6F405006F1B41 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 62W3ZAMLSW;
+				INFOPLIST_FILE = Tjojo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.johnson.Tjojo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2C3C474D22F6F403006F1B41 /* Build configuration list for PBXProject "Tjojo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2C3C476622F6F405006F1B41 /* Debug */,
+				2C3C476722F6F405006F1B41 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2C3C476822F6F405006F1B41 /* Build configuration list for PBXNativeTarget "Tjojo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2C3C476922F6F405006F1B41 /* Debug */,
+				2C3C476A22F6F405006F1B41 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2C3C474A22F6F403006F1B41 /* Project object */;
+}
