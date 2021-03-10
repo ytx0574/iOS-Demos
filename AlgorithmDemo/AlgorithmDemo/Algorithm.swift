@@ -119,7 +119,7 @@ func insert_sort(arr:[Int]) -> [Int] {
             j -= 1;
         }
         
-        // 存在比其小的数，插入  通过上面的查找, 找到比签名位置的数小的数, 那么就在j位插入当前这个数.
+        // 存在比其小的数，插入  通过上面的查找, 找到比前面位置的数小的数, 那么就在j位插入当前这个数.
         if (j != i) {
             arr[j] = tmp;
         }
@@ -128,7 +128,7 @@ func insert_sort(arr:[Int]) -> [Int] {
     return arr;
 }
 
-//shell排序 希尔排序    根据增量因子gap(长度)拆分数据. 每组数据长度为gap.  当gap为1的时候, 就和上面的插入排序一样
+//shell排序 希尔排序    根据增量因子gap分组排序, 把前后对应的index替换(如果前者小于后者的话)  当gap为1的时候, 就和上面的插入排序一样
 func shell_sort(arr: [Int]) -> [Int] {
     // 对 arr 进行拷贝，不改变参数内容
     var arr = arr
@@ -141,23 +141,23 @@ func shell_sort(arr: [Int]) -> [Int] {
     
     while (gap > 0) {
         if gap < arr.count {
-            for i in gap...arr.count - 1 {//(int i = gap; i < arr.length; i++) {
+            for i in gap...arr.count - 1 {
                 let tmp = arr[i];
                 var j = i - gap;
                 while (j >= 0 && arr[j] > tmp) {
                     arr[j + gap] = arr[j];
                     j -= gap;
                 }
-                arr[j + gap] = tmp; // == (arr[i] = tmp)
+                arr[j + gap] = tmp;
             }
         }
-        gap = Int(floor(Float(gap/ratio)))//(int) Math.floor(gap / 3);
+        gap = Int(floor(Float(gap / ratio)))
     }
     
     return arr;
 }
 
-//归并排序 有点像希尔排序, 拆分成一小段, 小段小段小段的排序好, 然后合并排序好
+//归并排序 拆分成一小段, 小段小段的排序好, 然后小段小段的对比数据提取出整合
 //比如 1:1 2:1 1:2的小段拆分排序
 func merge_sort(arr:[Int]) -> [Int] {
     
@@ -195,10 +195,10 @@ func merge_sort(arr:[Int]) -> [Int] {
         }
         let middle = Int(floor(Float(arr.count / 2)));
         
-        let left:[Int] = (arr as NSArray).subarray(with: NSMakeRange(0, middle)) as! [Int] //Arrays.copyOfRange(arr, 0, middle);
-        let right:[Int] = (arr as NSArray).subarray(with: NSMakeRange(middle, arr.count - middle)) as! [Int]//Arrays.copyOfRange(arr, middle, arr.length);
+        let left_ay:[Int] = (arr as NSArray).subarray(with: NSMakeRange(0, middle)) as! [Int]
+        let right_ay:[Int] = (arr as NSArray).subarray(with: NSMakeRange(middle, arr.count - middle)) as! [Int]
         
-        return merge(left: sort(arr: left), right: sort(arr: right));
+        return merge(left: sort(arr: left_ay), right: sort(arr: right_ay));
     }
     
     let arr = sort(arr: arr)
@@ -261,6 +261,8 @@ func quick_sort2(arr: [Int]) -> [Int] {
             var j = right;
             while (i < j) {
 
+                //此处必须先从右边开始. 找位置要先冲基数的对立面开始找, 否则会导致找j的过程中优先满足i < j的条件, 导致找到错误的j
+                //参考链接:https://blog.csdn.net/lkp1603645756/article/details/85008715
                 while (arr[j] >= pivot && i < j) { //从右往左找, 小于基准数的, 跳出循环 (得到小于基准数的数的下标)
                     j -= 1;
                 }
@@ -677,3 +679,24 @@ func radix_sort1(arr: [Int]) -> [Int] {
     return arr
 }
 
+
+
+//二分法查找
+func binary_search(arr: [Int], target: Int) -> Int {
+    var left = 0
+    var right = arr.count - 1
+    var mid = 0
+    while left <= right {
+        mid = left + (right - left) / 2
+        if arr[mid] == target {
+            break
+        }
+        else if arr[mid] < target {
+            left = mid + 1
+        }
+        else if arr[mid] > target {
+            right = mid - 1
+        }
+    }
+    return mid >= 0 ? mid : -1
+}

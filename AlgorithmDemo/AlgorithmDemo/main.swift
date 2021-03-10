@@ -39,3 +39,5 @@ count_sort3(arr: need_sort_ay)
 bucket_sort(arr: need_sort_ay)
 bucket_sort2(arr: need_sort_ay)
 radix_sort(arr: need_sort_ay)
+
+binary_search(arr: need_sort_ay, target: 1)
